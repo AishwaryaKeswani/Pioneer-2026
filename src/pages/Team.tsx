@@ -1,5 +1,10 @@
+import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Linkedin } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+// Defined Filter Type
+type FilterType = 'all' | 'central' | 'pioneer';
 
 const leadership = [
   {
@@ -71,6 +76,26 @@ const departments = [
 ];
 
 const Team = () => {
+  const [filter, setFilter] = useState<FilterType>('all');
+
+  // Helper to determine visibility
+  const showCentral = filter === 'all' || filter === 'central';
+  const showPioneer = filter === 'all' || filter === 'pioneer';
+
+  const FilterButton = ({ type, label }: { type: FilterType; label: string }) => (
+    <button
+      onClick={() => setFilter(type)}
+      className={cn(
+        "px-6 py-2 rounded-full font-montserrat text-sm font-semibold tracking-wider uppercase transition-all duration-300 border",
+        filter === type
+          ? "bg-primary text-white border-primary shadow-lg shadow-primary/25"
+          : "bg-card/30 text-muted-foreground border-white/10 hover:bg-card/50 hover:text-white"
+      )}
+    >
+      {label}
+    </button>
+  );
+
   return (
     <Layout>
       {/* Hero */}
@@ -79,108 +104,119 @@ const Team = () => {
           <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
             <span className="gradient-text">Meet Our Team</span>
           </h1>
-          <p className="font-montserrat text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="font-montserrat text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             The passionate individuals making Pune Startup Fest possible
           </p>
-        </div>
-      </section>
 
-      {/* Leadership */}
-      <section className="py-16 md:py-24 bg-card">
-        <div className="container mx-auto px-4">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-16">
-            <span className="gradient-text">Leadership Team</span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {leadership.map((member, index) => (
-              <div
-                key={member.name}
-                className="glass-card p-8 text-center hover-lift animate-fade-in"
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                {/* Profile Image */}
-                <div className="relative w-32 h-32 mx-auto mb-6">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-accent p-[3px] animate-pulse-glow">
-                    <div className="w-full h-full rounded-full bg-card overflow-hidden">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="font-montserrat font-bold text-xl text-foreground mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-primary font-medium mb-4">{member.role}</p>
-                <a
-                  href={member.linkedin}
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
-                  aria-label={`${member.name} LinkedIn`}
-                >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-              </div>
-            ))}
+          {/* Filters */}
+          <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <FilterButton type="all" label="All Members" />
+            <FilterButton type="central" label="Team Pioneer" />
+            <FilterButton type="pioneer" label="Central Core Committee" />
           </div>
         </div>
       </section>
 
-      {/* Core Team */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-16">
-            <span className="gradient-text">Core Team</span>
-          </h2>
+      {/* Team Pioneer */}
+      {showCentral && (
+        <section className="py-16 md:py-24 bg-card animate-slide-up">
+          <div className="container mx-auto px-4">
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-16">
+              <span className="gradient-text">Team Pioneer</span>
+            </h2>
 
-          {departments.map((dept, deptIndex) => (
-            <div key={dept.name} className="mb-16 last:mb-0">
-              <h3 className="font-montserrat text-xl font-semibold text-center text-muted-foreground mb-8">
-                {dept.name}
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                {dept.members.map((member, index) => (
-                  <div
-                    key={member.name}
-                    className="glass-card p-4 text-center hover-lift animate-fade-in group"
-                    style={{ animationDelay: `${(deptIndex * 0.1) + (index * 0.05)}s` }}
-                  >
-                    {/* Profile Image */}
-                    <div className="relative w-20 h-20 mx-auto mb-4 overflow-hidden rounded-full">
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary p-[2px]">
-                        <div className="w-full h-full rounded-full bg-card overflow-hidden">
-                          <img
-                            src={member.image}
-                            alt={member.name}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          />
-                        </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {leadership.map((member, index) => (
+                <div
+                  key={member.name}
+                  className="glass-card p-8 text-center hover-lift animate-fade-in"
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
+                  {/* Profile Image */}
+                  <div className="relative w-32 h-32 mx-auto mb-6">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-accent p-[3px] animate-pulse-glow">
+                      <div className="w-full h-full rounded-full bg-card overflow-hidden">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                     </div>
-
-                    <h4 className="font-montserrat font-semibold text-foreground text-sm mb-1">
-                      {member.name}
-                    </h4>
-                    <p className="text-muted-foreground text-xs mb-3">
-                      {member.role}
-                    </p>
-                    <a
-                      href={member.linkedin}
-                      className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
-                      aria-label={`${member.name} LinkedIn`}
-                    >
-                      <Linkedin className="h-4 w-4" />
-                    </a>
                   </div>
-                ))}
-              </div>
+
+                  <h3 className="font-montserrat font-bold text-xl text-foreground mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-primary font-medium mb-4">{member.role}</p>
+                  <a
+                    href={member.linkedin}
+                    className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+                    aria-label={`${member.name} LinkedIn`}
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
+
+      {/* Central Core Committee */}
+      {showPioneer && (
+        <section className="py-16 md:py-24 animate-slide-up">
+          <div className="container mx-auto px-4">
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-16">
+              <span className="gradient-text">Central Core Committee</span>
+            </h2>
+
+            {departments.map((dept, deptIndex) => (
+              <div key={dept.name} className="mb-16 last:mb-0">
+                <h3 className="font-montserrat text-xl font-semibold text-center text-muted-foreground mb-8">
+                  {dept.name}
+                </h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                  {dept.members.map((member, index) => (
+                    <div
+                      key={member.name}
+                      className="glass-card p-4 text-center hover-lift animate-fade-in group"
+                      style={{ animationDelay: `${(deptIndex * 0.1) + (index * 0.05)}s` }}
+                    >
+                      {/* Profile Image */}
+                      <div className="relative w-20 h-20 mx-auto mb-4 overflow-hidden rounded-full">
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary p-[2px]">
+                          <div className="w-full h-full rounded-full bg-card overflow-hidden">
+                            <img
+                              src={member.image}
+                              alt={member.name}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <h4 className="font-montserrat font-semibold text-foreground text-sm mb-1">
+                        {member.name}
+                      </h4>
+                      <p className="text-muted-foreground text-xs mb-3">
+                        {member.role}
+                      </p>
+                      <a
+                        href={member.linkedin}
+                        className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+                        aria-label={`${member.name} LinkedIn`}
+                      >
+                        <Linkedin className="h-4 w-4" />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Join CTA */}
       <section className="py-16 md:py-24 bg-card">
