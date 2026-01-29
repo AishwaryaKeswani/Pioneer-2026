@@ -63,6 +63,7 @@ export default {
         playfair: ["Playfair Display", "serif"],
         montserrat: ["Montserrat", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+        samarkan: ["Samarkan", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
