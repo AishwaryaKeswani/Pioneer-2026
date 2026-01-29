@@ -1,0 +1,204 @@
+import { Layout } from "@/components/layout/Layout";
+import { Linkedin } from "lucide-react";
+
+const leadership = [
+  {
+    name: "Arjun Patel",
+    role: "President",
+    image: "/placeholder.svg",
+    linkedin: "#",
+  },
+  {
+    name: "Sneha Kulkarni",
+    role: "Vice President",
+    image: "/placeholder.svg",
+    linkedin: "#",
+  },
+  {
+    name: "Rohan Deshmukh",
+    role: "General Secretary",
+    image: "/placeholder.svg",
+    linkedin: "#",
+  },
+];
+
+const departments = [
+  {
+    name: "Operations",
+    members: [
+      { name: "Amit Sharma", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Priya Joshi", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Ravi Kumar", role: "Member", image: "/placeholder.svg", linkedin: "#" },
+    ],
+  },
+  {
+    name: "Marketing",
+    members: [
+      { name: "Neha Gupta", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Vikram Singh", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Anjali Mehta", role: "Member", image: "/placeholder.svg", linkedin: "#" },
+    ],
+  },
+  {
+    name: "Technical",
+    members: [
+      { name: "Karan Thakur", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Divya Rao", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Suresh Nair", role: "Member", image: "/placeholder.svg", linkedin: "#" },
+    ],
+  },
+  {
+    name: "Sponsorship",
+    members: [
+      { name: "Manish Agarwal", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Pooja Bhatt", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+    ],
+  },
+  {
+    name: "PR & Outreach",
+    members: [
+      { name: "Rahul Verma", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Simran Kaur", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+    ],
+  },
+  {
+    name: "Design",
+    members: [
+      { name: "Aditya Chopra", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Maya Iyer", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+    ],
+  },
+];
+
+const Team = () => {
+  return (
+    <Layout>
+      {/* Hero */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24 animated-gradient-bg relative">
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
+            <span className="gradient-text">Meet Our Team</span>
+          </h1>
+          <p className="font-montserrat text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            The passionate individuals making Pune Startup Fest possible
+          </p>
+        </div>
+      </section>
+
+      {/* Leadership */}
+      <section className="py-16 md:py-24 bg-card">
+        <div className="container mx-auto px-4">
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-16">
+            <span className="gradient-text">Leadership Team</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {leadership.map((member, index) => (
+              <div
+                key={member.name}
+                className="glass-card p-8 text-center hover-lift animate-fade-in"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
+                {/* Profile Image */}
+                <div className="relative w-32 h-32 mx-auto mb-6">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-accent p-[3px] animate-pulse-glow">
+                    <div className="w-full h-full rounded-full bg-card overflow-hidden">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="font-montserrat font-bold text-xl text-foreground mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-primary font-medium mb-4">{member.role}</p>
+                <a
+                  href={member.linkedin}
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+                  aria-label={`${member.name} LinkedIn`}
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Core Team */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center mb-16">
+            <span className="gradient-text">Core Team</span>
+          </h2>
+
+          {departments.map((dept, deptIndex) => (
+            <div key={dept.name} className="mb-16 last:mb-0">
+              <h3 className="font-montserrat text-xl font-semibold text-center text-muted-foreground mb-8">
+                {dept.name}
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                {dept.members.map((member, index) => (
+                  <div
+                    key={member.name}
+                    className="glass-card p-4 text-center hover-lift animate-fade-in group"
+                    style={{ animationDelay: `${(deptIndex * 0.1) + (index * 0.05)}s` }}
+                  >
+                    {/* Profile Image */}
+                    <div className="relative w-20 h-20 mx-auto mb-4 overflow-hidden rounded-full">
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary p-[2px]">
+                        <div className="w-full h-full rounded-full bg-card overflow-hidden">
+                          <img
+                            src={member.image}
+                            alt={member.name}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <h4 className="font-montserrat font-semibold text-foreground text-sm mb-1">
+                      {member.name}
+                    </h4>
+                    <p className="text-muted-foreground text-xs mb-3">
+                      {member.role}
+                    </p>
+                    <a
+                      href={member.linkedin}
+                      className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-colors"
+                      aria-label={`${member.name} LinkedIn`}
+                    >
+                      <Linkedin className="h-4 w-4" />
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Join CTA */}
+      <section className="py-16 md:py-24 bg-card">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-4">
+            <span className="gradient-text">Join Our Team</span>
+          </h2>
+          <p className="font-montserrat text-muted-foreground text-lg max-w-xl mx-auto mb-8">
+            Want to be part of the next Pune Startup Fest? We're always looking
+            for passionate individuals.
+          </p>
+          <a href="/contact" className="glow-button font-montserrat inline-block">
+            Become a Volunteer
+          </a>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default Team;
