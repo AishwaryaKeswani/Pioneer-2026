@@ -1,5 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Users } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -14,36 +14,68 @@ const quickLinks = [
   { name: "Press & Media", href: "#media" },
 ];
 
-const faqs = [
+const contactCards = [
   {
-    question: "When and where is Pune Startup Fest 2026?",
-    answer:
-      "Pune Startup Fest 2026 will be held on January 17th and 18th, 2026 at the Convention Center in Hinjewadi, Pune.",
+    title: "Abhivyakti",
+    email: "kitcoekabhivyakti@gmail.com",
+    phone: "+91 9322842490",
+    icon: Users,
   },
   {
-    question: "How can I register for the event?",
+    title: "Prakalp",
+    email: "kitcoekprakalp@gmail.com",
+    phone: "+91 7058626818",
+    icon: Users,
+  },
+  {
+    title: "Battle Blitz",
+    email: "rajput.digvijay@kitcoek.in",
+    phone: "+91 9763738262",
+    icon: Users,
+  },
+];
+
+
+const faqs = [
+  {
+    question: "What is PIONEER 2026?",
     answer:
-      "You can register by clicking the 'Register Now' button on our website or by visiting our registration page. Early bird discounts are available for a limited time.",
+      "PIONEER 2026 is a National Level Technical Event organized by ISTE Student Chapter, KIT’s College of Engineering, Kolhapur, focusing on innovation, research, and entrepreneurship.",
+  },
+  {
+    question: "When and where is PIONEER 2026 held?",
+    answer:
+      "📅 21–22 February 2026\n📍 KIT’s College of Engineering, Kolhapur (Autonomous)",
+  },
+  {
+    question: "Who can participate?",
+    answer:
+      "Diploma, UG, PG (including MCA) students, student innovators, and startups can participate. A valid college/university ID card is mandatory.",
+  },
+  {
+    question: "What are the major events under PIONEER 2026?",
+    answer:
+      "PRAIKALP – Innovation & startup pitching\nABHIVYAKTI – Technical paper presentation\nBattle Blitz – Free Fire gaming tournament",
+  },
+  {
+    question: "What is the total prize pool?",
+    answer:
+      "🏆 Prizes worth up to ₹5 Lakhs are awarded across various events and domains.",
   },
   {
     question: "What is the registration fee?",
     answer:
-      "Registration fees vary by ticket type. Student passes start at ₹499, while professional passes are ₹1,499. VIP passes with exclusive access are available at ₹4,999.",
+      "PRAIKALP: ₹200 per participant (includes accommodation & food for outstation participants)\nBattle Blitz: ₹800 per squad\nABHIVYAKTI: As per paper presentation rules",
   },
   {
-    question: "Can I participate in multiple competitions?",
+    question: "What are the important deadlines?",
     answer:
-      "Yes, you can participate in multiple competitions as long as the schedules don't conflict. Each competition may have its own registration requirements.",
+      "📌 Abstract / Paper Submission: 18 February 2026\n📌 Battle Blitz Round 1: 15 February 2026\n📌 Main Event: 21–22 February 2026",
   },
   {
-    question: "How do I become a sponsor?",
+    question: "Where can I get rules, registration, and updates?",
     answer:
-      "Visit our Sponsors page to view our sponsorship packages. For custom packages or inquiries, please reach out to us through the contact form or email us directly.",
-  },
-  {
-    question: "Is there accommodation available?",
-    answer:
-      "While we don't provide accommodation directly, we have partnered with nearby hotels offering special discounts for event attendees. Details will be shared after registration.",
+      "🌐 Visit www.kitcoek.in/pioneer2026\n📱 Detailed rules and updates will be shared via WhatsApp after registration.",
   },
 ];
 
@@ -67,18 +99,17 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Map */}
-            <div className="glass-card p-2 animate-fade-in">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.454567633574!2d74.2599192749174!3d16.654121284113344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0ffb509926fa9%3A0x9af43eb75ec2804!2sKIT&#39;s%20College%20of%20Engineering%20Kolhapur%20(Empowered%20Autonomous)!5e0!3m2!1sen!2sin!4v1769769843043!5m2!1sen!2sin" 
-                width="100%" 
-                height="450" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-lg"
-              ></iframe>
-            </div>
+              <div className="glass-card p-2 animate-fade-in w-full h-[400px]">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.4545676335933!2d74.2599192749174!3d16.654121284113344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0ffb509926fa9%3A0x9af43eb75ec2804!2sKIT's%20College%20of%20Engineering%20Kolhapur%20(Empowered%20Autonomous)!5e0!3m2!1sen!2sin!4v1769778594737!5m2!1sen!2sin"
+        className="w-full h-full rounded-lg"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="KIT College of Engineering Kolhapur Map"
+      />
+    </div>
 
             {/* Contact Info */}
             <div className="space-y-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
@@ -133,6 +164,7 @@ const Contact = () => {
                 <div className="mt-8 pt-6 border-t border-border">
                   <p className="font-medium text-foreground mb-4">Follow Us</p>
                   <div className="flex gap-4">
+                    
                     <a
                       href="#"
                       className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -156,7 +188,7 @@ const Contact = () => {
               </div>
 
               {/* Quick Links */}
-              <div className="glass-card p-8">
+              {/* <div className="glass-card p-8">
                 <h2 className="font-montserrat font-bold text-2xl text-foreground mb-6">
                   Quick Links
                 </h2>
@@ -171,16 +203,76 @@ const Contact = () => {
                     </a>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-16 md:py-24 bg-card">
+      {/* Team Contact Cards */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-12 text-center">
+            <span className="gradient-text">Team Contacts</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {contactCards.map((card, index) => (
+              <div
+                key={card.title}
+                className="glass-card p-8 animate-fade-in hover:scale-105 transition-transform duration-300"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <card.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-montserrat font-bold text-xl text-foreground">
+                    {card.title}
+                  </h3>
+                </div>
+                
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <Mail className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Email</p>
+                      <a
+                        href={`mailto:${card.email}`}
+                        className="text-sm text-foreground hover:text-primary transition-colors break-all"
+                      >
+                        {card.email}
+                      </a>
+                    </div>
+                  </li>
+                  
+                  <li className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <Phone className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Phone</p>
+                      <a
+                        href={`tel:${card.phone.replace(/\s/g, "")}`}
+                        className="text-sm text-foreground hover:text-primary transition-colors"
+                      >
+                        {card.phone}
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+   <section className="py-16 md:py-24 bg-card">
+        <div className="container mx-auto px-4">
+          <h2 className="font-playfair text-4xl font-bold text-center mb-12">
             <span className="gradient-text">Frequently Asked Questions</span>
           </h2>
 
@@ -190,21 +282,24 @@ const Contact = () => {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="glass-card px-6 border-none animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  className="glass-card px-6 border-none"
                 >
-                  <AccordionTrigger className="font-montserrat font-medium text-foreground hover:text-primary hover:no-underline">
+                  <AccordionTrigger className="font-montserrat font-medium">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+
+                  {/* ✅ FIXED NEWLINE ISSUE HERE */}
+                  <AccordionContent className="text-muted-foreground whitespace-pre-line">
                     {faq.answer}
                   </AccordionContent>
+
                 </AccordionItem>
               ))}
             </Accordion>
           </div>
         </div>
       </section>
+
     </Layout>
   );
 };
