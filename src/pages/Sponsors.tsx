@@ -2,17 +2,56 @@ import { Layout } from "@/components/layout/Layout";
 
 // 1. Featured Sponsors Data (4 Items)
 const featuredSponsors = [
-  { name: "TechGiant Corp", logo: "/placeholder.svg" },
-  { name: "InnovateLabs", logo: "/placeholder.svg" },
-  { name: "FutureVentures", logo: "/placeholder.svg" },
-  { name: "GlobalSystems", logo: "/placeholder.svg" },
+  { name: "Honda Big", logo: "/images/sponsors/honda.jpeg" },
+  { name: "IDBI", logo: "/images/sponsors/idbi.jpeg" },
+  { name: "Mahindra", logo: "/images/sponsors/mahindra.jpeg" },
+  { name: "SBI", logo: "/images/sponsors/sbi.png" },
 ];
 
-// 2. Partners Data (~40 Items generated for layout demonstration)
-const partners = Array.from({ length: 40 }).map((_, i) => ({
-  name: `Partner ${i + 1}`,
-  logo: "/placeholder.svg",
-}));
+// 2. Partners Data (40 Different Images)
+const partners = [
+  { name: "TPE", logo: "public/images/sponsors/tpe.jpeg" },
+  { name: "Maruti Sujuki", logo: "public/images/sponsors/maruti.jpeg" },
+ // { name: "Vision 3", logo: "/images/sponsors/vision3.jpeg" },
+  { name: "Vanita Agro", logo: "public/images/sponsors/vanita.jpeg" },
+  { name: "Mahindra", logo: "public/images/sponsors/mahindrasports.jpeg" },
+  { name: "Shanti", logo: "public/images/sponsors/shanti.jpeg" },
+  { name: "yezdi", logo: "public/images/sponsors/yezdi.jpeg" },
+  { name: "Superhero", logo: "public/images/sponsors/superhero.jpeg" },
+  { name: "Menon Bearings", logo: "public/images/sponsors/menon.jpeg" },
+  { name: "Manchester", logo: "public/images/sponsors/manchester.jpeg" },
+ 
+  { name: "mahalaxmi ", logo: "public/images/sponsors/mahalaxmi motors.jpeg" },
+  { name: "synergic", logo: "public/images/sponsors/synergy.jpeg" },
+  { name: "37", logo: "public/images/sponsors/vision.jpeg" },
+  { name: "mayura steel", logo: "public/images/sponsors/mayura.jpeg" },
+  { name: "RV Exhaust System", logo: "public/images/sponsors/RV Exhaust.jpeg" },
+  { name: "Steel & profile", logo: "public/images/sponsors/steel&profile.jpeg" },
+  { name: "venkateshwar", logo: "public/images/sponsors/vekentehwar.jpeg" },
+  { name: "HEM Electroniques", logo: "public/images/sponsors/hem electroniques.jpeg" },
+  { name: "Ghatage Roofying", logo: "public/images/sponsors/ghatage.jpeg" },
+  { name: "18", logo: "public/images/sponsors/dharti.jpeg" },
+  { name: "19", logo: "public/images/sponsors/KR motors.jpeg" },
+  { name: "20", logo: "public/images/sponsors/tata chetan.jpeg" },
+
+  { name: "21", logo: "public/images/sponsors/aaira.jpeg" },
+  { name: "22", logo: "public/images/sponsors/tumbledry.jpeg" },
+  { name: "23", logo: "public/images/sponsors/adms.jpeg" },
+  { name: "24", logo: "public/images/sponsors/bank.jpeg" },
+  { name: "25", logo: "public/images/sponsors/sg phyto.jpeg" },
+  { name: "26", logo: "public/images/sponsors/rh house.jpeg" },
+  { name: "27", logo: "public/images/sponsors/aan purn.jpeg" },
+  { name: "28", logo: "public/images/sponsors/puja fabriceters.jpeg" },
+  { name: "29", logo: "public/images/sponsors/natural grp.jpeg" },
+  { name: "30", logo: "public/images/sponsors/ravikiran.jpeg" },
+
+  { name: "31", logo: "public/images/sponsors/mirachi.jpeg" },
+  { name: "32", logo: "public/images/sponsors/languageberg.jpeg" },
+  { name: "33", logo: "public/images/sponsors/infogrow.jpeg" },
+  { name: "34", logo: "public/images/sponsors/procom.jpeg" },
+  { name: "35", logo: "public/images/sponsors/walawakar.jpeg" },
+ 
+];
 
 const Sponsors = () => {
   return (
@@ -52,12 +91,11 @@ const Sponsors = () => {
                   className="relative group w-full max-w-[300px] h-[180px] md:w-[350px] md:h-[220px] animate-slide-up"
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
-                  {/* Neon Gradient Outline (Intense for Featured) */}
+                  {/* Neon Gradient Outline */}
                   <div className="absolute -inset-[3px] rounded-2xl bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 opacity-60 group-hover:opacity-100 blur-md transition-all duration-500 animate-gradient-xy group-hover:blur-xl"></div>
 
                   {/* Card Content */}
                   <div className="relative h-full w-full glass-card flex items-center justify-center p-8 bg-black/60 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden transition-transform duration-500 group-hover:scale-[1.02]">
-                    {/* Inner Glow */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
                     <img
@@ -81,18 +119,15 @@ const Sponsors = () => {
               <div className="h-px w-12 md:w-24 bg-gradient-to-l from-transparent to-primary/30"></div>
             </div>
 
-            {/* Grid for 40 items */}
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 place-items-center">
               {partners.map((partner, index) => (
                 <div
                   key={index}
                   className="relative group w-full h-[100px] md:h-[120px] animate-fade-in"
-                  style={{ animationDelay: `${0.2 + (index * 0.05)}s` }} // Staggered animation
+                  style={{ animationDelay: `${0.2 + (index * 0.05)}s` }}
                 >
-                  {/* Neon Gradient Outline (Appears on Hover) */}
                   <div className="absolute -inset-[2px] rounded-xl bg-gradient-to-r from-primary via-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 blur-sm transition-all duration-300"></div>
 
-                  {/* Card Content */}
                   <div className="relative h-full w-full glass-card flex items-center justify-center p-4 bg-card/40 backdrop-blur-sm border border-white/5 rounded-xl overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                     <img
                       src={partner.logo}
