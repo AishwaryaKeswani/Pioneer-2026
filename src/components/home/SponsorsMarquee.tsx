@@ -1,12 +1,46 @@
 const sponsors = [
-  { name: "TechCorp", logo: "/placeholder.svg" },
-  { name: "InnovateLabs", logo: "/placeholder.svg" },
-  { name: "FutureVentures", logo: "/placeholder.svg" },
-  { name: "StartupHub", logo: "/placeholder.svg" },
-  { name: "GrowthPartners", logo: "/placeholder.svg" },
-  { name: "VentureOne", logo: "/placeholder.svg" },
-  { name: "ScaleUp", logo: "/placeholder.svg" },
-  { name: "InvestNow", logo: "/placeholder.svg" },
+  { name: "TechCorp", logo: "public/images/home/tpe.jpeg" },
+  { name: "InnovateLabs", logo: "public/images/home/maruti.jpeg "},
+  { name: "FutureVentures", logo: "public/images/home/vanita.jpeg" },
+  { name: "StartupHub", logo: "public/images/home/mahindrasports.jpeg" },
+  { name: "GrowthPartners", logo: "public/images/home/a5.webp" },
+  { name: "TechCorp", logo: "public/images/home/" },
+  { name: "InnovateLabs", logo: "public/images/home/maruti.jpeg "},
+  { name: "FutureVentures", logo: "public/images/home/vanita.jpeg" },
+  { name: "StartupHub", logo: "public/images/home/mahindrasports.jpeg" },
+  { name: "GrowthPartners", logo: "public/images/home/a5.webp" },
+  { name: "TechCorp", logo: "public/images/home/tpe.jpeg" },
+  { name: "InnovateLabs", logo: "public/images/home/maruti.jpeg "},
+  { name: "FutureVentures", logo: "public/images/home/vanita.jpeg" },
+  { name: "StartupHub", logo: "public/images/home/mahindrasports.jpeg" },
+  { name: "GrowthPartners", logo: "public/images/home/a5.webp" },
+  { name: "TechCorp", logo: "public/images/home/tpe.jpeg" },
+  { name: "InnovateLabs", logo: "public/images/home/maruti.jpeg "},
+  { name: "FutureVentures", logo: "public/images/home/vanita.jpeg" },
+  { name: "StartupHub", logo: "public/images/home/mahindrasports.jpeg" },
+  { name: "GrowthPartners", logo: "public/images/home/a5.webp" },
+  { name: "TechCorp", logo: "public/images/home/tpe.jpeg" },
+  { name: "InnovateLabs", logo: "public/images/home/maruti.jpeg "},
+  { name: "FutureVentures", logo: "public/images/home/vanita.jpeg" },
+  { name: "StartupHub", logo: "public/images/home/mahindrasports.jpeg" },
+  { name: "GrowthPartners", logo: "public/images/home/a5.webp" },
+  { name: "TechCorp", logo: "public/images/home/tpe.jpeg" },
+  { name: "InnovateLabs", logo: "public/images/home/maruti.jpeg "},
+  { name: "FutureVentures", logo: "public/images/home/vanita.jpeg" },
+  { name: "StartupHub", logo: "public/images/home/mahindrasports.jpeg" },
+  { name: "GrowthPartners", logo: "public/images/home/a5.webp" },
+  { name: "TechCorp", logo: "public/images/home/tpe.jpeg" },
+  { name: "InnovateLabs", logo: "public/images/home/maruti.jpeg "},
+  { name: "FutureVentures", logo: "public/images/home/vanita.jpeg" },
+  { name: "StartupHub", logo: "public/images/home/mahindrasports.jpeg" },
+  { name: "GrowthPartners", logo: "public/images/home/a5.webp" },
+  { name: "TechCorp", logo: "public/images/home/tpe.jpeg" },
+  { name: "InnovateLabs", logo: "public/images/home/maruti.jpeg "},
+  { name: "FutureVentures", logo: "public/images/home/vanita.jpeg" },
+  { name: "StartupHub", logo: "public/images/home/mahindrasports.jpeg" },
+  { name: "GrowthPartners", logo: "public/images/home/a5.webp" },
+
+  
 ];
 
 export const SponsorsMarquee = () => {
@@ -24,7 +58,7 @@ export const SponsorsMarquee = () => {
           {[...sponsors, ...sponsors].map((sponsor, index) => (
             <div
               key={`${sponsor.name}-${index}`}
-              className="flex-shrink-0 w-40 h-20 glass-card flex items-center justify-center px-6 grayscale hover:grayscale-0 transition-all duration-300"
+              className="flex-shrink-0 w-40 h-20 glass-card flex items-center justify-center px-6 grayscale hover:grayscale-0 transition-all duration-600"
             >
               <img
                 src={sponsor.logo}
@@ -38,7 +72,7 @@ export const SponsorsMarquee = () => {
           {[...sponsors, ...sponsors].map((sponsor, index) => (
             <div
               key={`${sponsor.name}-dup-${index}`}
-              className="flex-shrink-0 w-40 h-20 glass-card flex items-center justify-center px-6 grayscale hover:grayscale-0 transition-all duration-300"
+              className="flex-shrink-0 w-40 h-20 glass-card flex items-center justify-center px-6 grayscale hover:grayscale-0 transition-all duration-600"
             >
               <img
                 src={sponsor.logo}
