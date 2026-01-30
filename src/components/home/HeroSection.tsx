@@ -29,52 +29,101 @@ export const HeroSection = () => {
           </p>
         </div>
 
-        <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          <h1 className="font-samarkan text-5xl md:text-7xl lg:text-9xl font-bold mb-6">
-            {/* Sky Blue to Purple Gradient */}
-            <span className="bg-gradient-to-r from-sky-400 to-purple-600 bg-clip-text text-transparent">
-              Pioneer
-            </span>
-            <br />
-            <span className="text-foreground">2026</span>
-          </h1>
-        </div>
+      <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
+  <h1 className="font-playfair text-5xl md:text-7xl lg:text-9xl font-bold mb-6 text-center">
+    
+    {/* Sky Blue to Purple Gradient */}
+    <span className="bg-gradient-to-r from-sky-400 to-purple-600 bg-clip-text text-transparent">
+      Pioneer
+    </span>
 
-        {/* Updated Date Layout: Month/Year | Date */}
-        <div className="animate-fade-in flex justify-center mb-10" style={{ animationDelay: "0.6s" }}>
-          <div className="relative group cursor-default">
-            {/* Animated Gradient Glow Background */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-purple-600 to-sky-400 rounded-xl blur opacity-40 group-hover:opacity-100 transition duration-500 group-hover:blur-md animate-gradient-xy"></div>
-            
-            {/* Main Glass Card */}
-            <div className="relative glass-card px-8 py-4 rounded-xl border border-white/10 bg-black/80 backdrop-blur-xl flex items-center gap-6">
-              
-              {/* Left Side: Month & Year */}
-              <div className="flex flex-col items-end justify-center">
-                <span className="font-montserrat text-xl md:text-2xl font-bold text-gray-200 tracking-wider">
-                  FEB
-                </span>
-                <span className="font-montserrat text-sm md:text-base text-gray-400 tracking-widest">
-                  2026
-                </span>
-              </div>
+    <br />
 
-              {/* Partition Line */}
-              <div className="h-12 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
+    <span className="text-foreground">
+      2026
+    </span>
 
-              {/* Right Side: Date (Bigger & White) */}
-              <div className="flex items-baseline">
-                <span className="font-playfair text-5xl md:text-7xl font-bold text-white drop-shadow-lg leading-none">
-                  21
-                </span>
-                <span className="font-playfair text-2xl md:text-3xl font-bold text-white/90 ml-1">
-                  st
-                </span>
-              </div>
+  </h1>
+</div>
 
-            </div>
-          </div>
-        </div>
+
+       {/* Updated Date Layout: Side by Side Dates */}
+<div
+  className="animate-fade-in flex justify-center gap-8 mb-10 flex-wrap"
+  style={{ animationDelay: "0.6s" }}
+>
+
+  {/* ===== FEB 21st ===== */}
+  <div className="relative group cursor-default">
+    {/* Animated Gradient Glow */}
+    <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-purple-600 to-sky-400 rounded-xl blur opacity-40 group-hover:opacity-100 transition duration-500 group-hover:blur-md animate-gradient-xy"></div>
+
+    {/* Glass Card */}
+    <div className="relative glass-card px-8 py-4 rounded-xl border border-white/10 bg-black/80 backdrop-blur-xl flex items-center gap-6">
+      
+      {/* Month & Year */}
+      <div className="flex flex-col items-end justify-center">
+        <span className="font-montserrat text-xl md:text-2xl font-bold text-gray-200 tracking-wider">
+          FEB
+        </span>
+        <span className="font-montserrat text-sm md:text-base text-gray-400 tracking-widest">
+          2026
+        </span>
+      </div>
+
+      {/* Divider */}
+      <div className="h-12 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
+
+      {/* Date */}
+      <div className="flex items-baseline">
+        <span className="font-playfair text-5xl md:text-7xl font-bold text-white drop-shadow-lg leading-none">
+          21
+        </span>
+        <span className="font-playfair text-2xl md:text-3xl font-bold text-white/90 ml-1">
+          st
+        </span>
+      </div>
+    </div>
+  </div>
+
+  {/* ===== FEB 22nd ===== */}
+  <div className="relative group cursor-default">
+    {/* Animated Gradient Glow */}
+    <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-purple-600 to-sky-400 rounded-xl blur opacity-40 group-hover:opacity-100 transition duration-500 group-hover:blur-md animate-gradient-xy"></div>
+
+    {/* Glass Card */}
+    <div className="relative glass-card px-8 py-4 rounded-xl border border-white/10 bg-black/80 backdrop-blur-xl flex items-center gap-6">
+      
+      {/* Month & Year */}
+      <div className="flex flex-col items-end justify-center">
+        <span className="font-montserrat text-xl md:text-2xl font-bold text-gray-200 tracking-wider">
+          FEB
+        </span>
+        <span className="font-montserrat text-sm md:text-base text-gray-400 tracking-widest">
+          2026
+        </span>
+      </div>
+
+      {/* Divider */}
+      <div className="h-12 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
+
+      {/* Date */}
+      <div className="flex items-baseline">
+        <span className="font-playfair text-5xl md:text-7xl font-bold text-white drop-shadow-lg leading-none">
+          22
+        </span>
+        <span className="font-playfair text-2xl md:text-3xl font-bold text-white/90 ml-1">
+          nd
+        </span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+        
 
         <div
           className="animate-fade-in-scale mb-12"

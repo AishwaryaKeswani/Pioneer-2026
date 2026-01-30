@@ -25,8 +25,8 @@ export const PrizePoolSection = () => {
 
   useEffect(() => {
     if (isVisible) {
-      const target = 350000;
-      const duration = 2000;
+      const target = 500000;
+      const duration = 1500;
       const steps = 60;
       const increment = target / steps;
       let current = 0;

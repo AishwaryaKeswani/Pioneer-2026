@@ -23,11 +23,11 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Branding */}
           <div className="lg:col-span-1">
-            <img 
-                src="public\images\home\logokitcoek.png" 
-                alt="Logo" 
-                className="h-12 w-auto mb-2 opacity-90 hover:opacity-100 transition-opacity" 
-              />
+             <img 
+  src="public/images/home/Reel LOGO Lelo.png"
+  alt="Logo"
+  className="h-10 w-auto rounded-lg relative z-10 transition-transform duration-300 group-hover:scale-105"
+/>
             <p className="text-muted-foreground text-sm mb-4">
               Pioneer 2026 - The falgship event of KITCOEK , Kolhapur.
             </p>
