@@ -5,16 +5,30 @@ export interface Event {
   title: string;
   tagline: string;
   category: string;
-  // New property to distinguish event types
   type: 'central' | 'departmental';
   shortDescription: string;
   fullDescription: string;
   image: string;
   icon: any;
   date: string;
+  // New Fields
+  prizes: {
+    first: string;
+    second: string;
+    third: string;
+    total: string;
+  };
+  rules: string[];
+  registrationDetails: {
+    fee: string;
+    teamSize: string;
+  };
+  coordinators: {
+    name: string;
+    phone: string;
+  }[];
 }
 
-// Placeholder content for descriptions
 const placeholderFullDescription = `
   Get ready to immerse yourself in the ultimate technical challenge. 
   This event is designed to test your skills, push your limits, and ignite your passion for innovation. 
@@ -23,43 +37,71 @@ const placeholderFullDescription = `
   Don't miss this opportunity to be part of something extraordinary!
 `;
 
+// Common placeholder data for new fields
+const commonEventData = {
+  prizes: {
+    first: "₹ 15,000",
+    second: "₹ 10,000",
+    third: "₹ 5,000",
+    total: "₹ 30,000"
+  },
+  rules: [
+    "Participants must carry a valid ID card.",
+    "Teams must report 30 minutes before the event starts.",
+    "Use of unfair means will lead to immediate disqualification.",
+    "The judges' decision will be final and binding.",
+    "All necessary equipment must be brought by the participants unless specified otherwise."
+  ],
+  registrationDetails: {
+    fee: "₹ 200 per team",
+    teamSize: "2 - 4 Members"
+  },
+  coordinators: [
+    { name: "Rahul Sharma", phone: "+91 98765 43210" },
+    { name: "Priya Patel", phone: "+91 98765 43211" }
+  ]
+};
+
 export const events: Event[] = [
-  // CENTRAL EVENTS (The 3 specified)
+  // CENTRAL EVENTS
   {
     id: "roboclash-arena",
     title: "RoboClash Arena",
     tagline: "BUILD. BATTLE. TRIUMPH.",
     category: "Robotics",
-    type: 'central', // Marked as central
+    type: 'central',
     shortDescription: "Design and build combat robots to fight for supremacy in the ultimate arena battle.",
     fullDescription: placeholderFullDescription,
     image: "/placeholder.svg", 
     icon: Bot,
     date: "Feb 21, 2026",
+    ...commonEventData
   },
   {
     id: "codewars-ultimate",
     title: "CodeWars Ultimate",
     tagline: "MAY THE BEST ALGORITHM WIN.",
     category: "Coding",
-    type: 'central', // Marked as central
+    type: 'central',
     shortDescription: "A high-intensity competitive programming contest to solve complex algorithmic challenges against the clock.",
     fullDescription: placeholderFullDescription,
     image: "/placeholder.svg",
     icon: Code,
     date: "Feb 21, 2026",
+    ...commonEventData
   },
   {
     id: "innovate-iot-hackathon",
     title: "Innovate IoT Hackathon",
     tagline: "CONNECTING THE FUTURE.",
     category: "IoT & Hardware",
-    type: 'central', // Marked as central
+    type: 'central',
     shortDescription: "Build smart, connected solutions integrating hardware sensors and software in a 24-hour hackathon.",
     fullDescription: placeholderFullDescription,
     image: "/placeholder.svg",
     icon: Cpu,
     date: "Feb 22, 2026",
+    ...commonEventData
   },
   // DEPARTMENTAL EVENTS
   {
@@ -73,6 +115,7 @@ export const events: Event[] = [
     image: "/placeholder.svg",
     icon: Database,
     date: "Feb 22, 2026",
+    ...commonEventData
   },
   {
     id: "web-wizards",
@@ -85,6 +128,7 @@ export const events: Event[] = [
     image: "/placeholder.svg",
     icon: Globe,
     date: "Feb 21, 2026",
+    ...commonEventData
   },
   {
     id: "ideathon-spark",
@@ -97,5 +141,6 @@ export const events: Event[] = [
     image: "/placeholder.svg",
     icon: Lightbulb,
     date: "Feb 22, 2026",
+    ...commonEventData
   },
 ];

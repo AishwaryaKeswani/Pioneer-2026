@@ -8,6 +8,7 @@ import Events from "./pages/Events";
 import EventDetails from "./pages/EventDetails"; // This import should work now
 import Sponsors from "./pages/Sponsors";
 import Team from "./pages/Team";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

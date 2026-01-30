@@ -23,11 +23,13 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Branding */}
           <div className="lg:col-span-1">
-            <div className="font-montserrat font-bold text-2xl mb-4">
-              <span className="gradient-text">E-CELL</span>
-            </div>
+            <img 
+                src="public\images\home\logokitcoek.png" 
+                alt="Logo" 
+                className="h-12 w-auto mb-2 opacity-90 hover:opacity-100 transition-opacity" 
+              />
             <p className="text-muted-foreground text-sm mb-4">
-              Pune Startup Fest 2026 - Where Innovation Meets Opportunity
+              Pioneer 2026 - The falgship event of KITCOEK , Kolhapur.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
@@ -69,6 +71,9 @@ export const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
+                <span>Abhivyakti</span>
+              </li>
+              <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <Mail className="h-4 w-4 mt-0.5 text-primary" />
                 <span>contact@punestartupfest.com</span>
               </li>
@@ -76,9 +81,29 @@ export const Footer = () => {
                 <Phone className="h-4 w-4 mt-0.5 text-primary" />
                 <span>+91 98765 43210</span>
               </li>
+              
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
-                <MapPin className="h-4 w-4 mt-0.5 text-primary" />
-                <span>Pune, Maharashtra, India</span>
+                <span>Prakalp</span>
+              </li>
+              <li className="flex items-start gap-3 text-muted-foreground text-sm">
+                <Mail className="h-4 w-4 mt-0.5 text-primary" />
+                <span>contact@punestartupfest.com</span>
+              </li>
+              <li className="flex items-start gap-3 text-muted-foreground text-sm">
+                <Phone className="h-4 w-4 mt-0.5 text-primary" />
+                <span>+91 98765 43210</span>
+              </li>
+
+              <li className="flex items-start gap-3 text-muted-foreground text-sm">
+                <span>Battle Blitz</span>
+              </li>
+              <li className="flex items-start gap-3 text-muted-foreground text-sm">
+                <Mail className="h-4 w-4 mt-0.5 text-primary" />
+                <span>contact@punestartupfest.com</span>
+              </li>
+              <li className="flex items-start gap-3 text-muted-foreground text-sm">
+                <Phone className="h-4 w-4 mt-0.5 text-primary" />
+                <span>+91 98765 43210</span>
               </li>
             </ul>
           </div>
@@ -103,7 +128,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-muted-foreground text-sm">
-            © 2026 Pune Startup Fest. All rights reserved. Organized by E-CELL.
+            © 2026 Pioneer KITCOEK. All rights reserved. Organized by ISTE.
           </p>
         </div>
       </div>

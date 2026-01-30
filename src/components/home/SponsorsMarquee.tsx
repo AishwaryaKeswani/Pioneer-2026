@@ -14,7 +14,7 @@ export const SponsorsMarquee = () => {
     <section className="py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4 mb-12">
         <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center">
-          <span className="gradient-text">Past Patronages</span>
+          <span className="gradient-text">Our Sponsors</span>
         </h2>
       </div>
 

@@ -25,7 +25,7 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10 pt-20">
         <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
           <p className="font-montserrat text-muted-foreground text-sm md:text-base uppercase tracking-widest mb-4">
-            viviota PRESENTS
+            KITCOEK PRESENTS
           </p>
         </div>
 

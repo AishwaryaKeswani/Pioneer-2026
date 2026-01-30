@@ -43,7 +43,11 @@ export const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
               <div className="font-montserrat font-bold text-xl md:text-2xl">
-                <span className="gradient-text">E-CELL</span>
+                <img 
+              src="public\images\home\logokitcoek.png" 
+              alt="Logo" 
+              className="h-10 w-auto relative z-10 transition-transform duration-300 group-hover:scale-105" 
+            />
               </div>
             </Link>
 
