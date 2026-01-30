@@ -10,43 +10,43 @@ const leadership = [
   {
     name: "Dr.Mohan B. Vanarotti",
     role: "Director,KITCoEK",
-    image: "/placeholder.svg",
-    linkedin: "#",
+    image: "public/images/team/director.png",
+    linkedin: "https://www.linkedin.com/in/mohanvanarotti?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Dr.Dattatray Sathe",
     role: "Registrar,KITCoEK",
-    image: "/placeholder.svg",
+    image: "public/images/team/Sathe Sir.png",
     linkedin: "#",
   },
   {
     name: "Dr.Jitendra Bhat",
     role: "Dean, Student Activity KITCoEK",
-    image: "/placeholder.svg",
-    linkedin: "#",
+    image: "public/images/team/JS bhat.png",
+    linkedin: "https://www.linkedin.com/in/dr-jitendra-shankarrao-bhat-137013254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Prof. Ashwini Shinde",
     role: "Faculty advisor, ISTE Student Chapter",
-    image: "/placeholder.svg",
-    linkedin: "#",
+    image: "public/images/team/Ashwini Shinde.png",
+    linkedin: "https://www.linkedin.com/in/ashwini-shinde-06b472a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_ap",
   },
   {
     name: "Dr.Sandeep Desai ",
     role: "Convener,Pioneer 2026",
-    image: "/placeholder.svg",
+    image: "public/images/team/SPD.png",
     linkedin: "#",
   },
   {
     name: "Aditya Patil ",
     role: "Chairperson",
-    image: "/placeholder.svg",
+    image: "public/images/team/Mr. Aditya Patil (2).png",
     linkedin: "#",
   },
   {
     name: "Sarthak Jadhav",
     role: "Secretary",
-    image: "/placeholder.svg",
+    image: "public/images/team/Mr. Sarthak Jadhav (2).png",
     linkedin: "#",
   },
 ];
@@ -55,59 +55,59 @@ const departments = [
   {
     name: "Events Head",
     members: [
-      { name: "Salikahamad Bagban", role: "Treasurer", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Akash Manwar", role: "Abhivyakti Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Tushar Gangadhare", role: "Prakalp Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Digvijay Rajput", role: "Battle Blitz Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Aishwarya Keswani", role: "Technical Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Aditya Patil", role: "Sponsorship Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Arya Agarwal", role: "Registration and campaigning Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Shriyash Dhole", role: "Printing and Publicity Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Trupti Shendage", role: "Correspondence and Media Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Salikahamad Bagban", role: "Treasurer", image: "public/images/team/Mr. Salikahmad Bagwan (2).png", linkedin: "#" },
+      { name: "Akash Manwar", role: "Abhivyakti Head", image: "public/images/team/Mr. Akash Manwar (2).png", linkedin: "#" },
+      { name: "Tushar Gangadhare", role: "Prakalp Head", image: "public/images/team/Mr. Tushar Gangadhare (2).png", linkedin: "#" },
+      { name: "Digvijay Rajput", role: "Battle Blitz Head", image: "public/images/team/Mr. Digvijay Rajput (2).png", linkedin: "#" },
+      { name: "Aishwarya Keswani", role: "Technical Head", image: "public/images/team/Ms. Aishwarya Keswani (2).png", linkedin: "https://www.linkedin.com/in/aishwarya-keswani-6760412b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Aditya Patil", role: "Sponsorship Head", image: "public/images/team/Mr. Aditya Patil (2).png", linkedin: "#" },
+      { name: "Arya Agarwal", role: "Registration and campaigning Head", image: "public/images/team/Ms. Aarya Agarwal (2).png", linkedin: "https://www.linkedin.com/in/aarya-agarwal27?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
+      { name: "Shriyash Dhole", role: "Printing and Publicity Head", image: "public/images/team/Mr. Shriyansh Dhole (2).png", linkedin: "#" },
+      { name: "Trupti Shendage", role: "Correspondence and Media Head", image: "public/images/team/Ms. Trupti Shendage (2).png", linkedin: "#" },
     ],
   },
   {
     name: "Events Co-Head",
     members: [
-      { name: "Riya Pawaskar", role: "Abhivyakti Co-Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Sanskruti Kuchnure", role: "Prakalp Co-Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Shrawani Choughule", role: "Technical Co-Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Atharva patil", role: "Sponsorship Co-Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Vaishnavi Zambre", role: "Registration Co-Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Sarvesh Sawant", role: "Campaigning Co-Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Sharayu Jagtap", role: "Correspondence Co-Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Atharv Kolape", role: "Social Media Co-Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Riya Pawaskar", role: "Abhivyakti Co-Head", image: "public/images/team/MS. Riya Pawaskar (2).png", linkedin: "#" },
+      { name: "Sanskruti Kuchnure", role: "Prakalp Co-Head", image: "public/images/team/Ms. Sanskruti Kuchnure (2).png", linkedin: "#" },
+      { name: "Shrawani Choughule", role: "Technical Co-Head", image: "public/images/team/Ms. Shrawani Chougule.png", linkedin: "#" },
+      { name: "Atharva patil", role: "Sponsorship Co-Head", image: "/public/images/team/Atharva Patil (2).png", linkedin: "#" },
+      { name: "Vaishnavi Zambre", role: "Registration Co-Head", image: "public/images/team/Ms. Vaishnavi Zambre (2).png", linkedin: "#" },
+      { name: "Sarvesh Sawant", role: "Campaigning Co-Head", image: "public/images/team/Sarvesh Sawant.png", linkedin: "https://www.linkedin.com/in/sarveshsawant45" },
+      { name: "Sharayu Jagtap", role: "Correspondence Co-Head", image: "public/images/team/Ms. Sharayu Jagtap (2).png", linkedin: "#" },
+      { name: "Atharv Kolape", role: "Social Media Co-Head", image: "public/images/team/Mr. Atharv Kolape (2).png", linkedin: "#" },
     ],
   },
-//   {
-//     name: "Technical",
-//     members: [
-//       { name: "Karan Thakur", role: "Head", image: "/placeholder.svg", linkedin: "#" },
-//       { name: "Divya Rao", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
-//       { name: "Suresh Nair", role: "Member", image: "/placeholder.svg", linkedin: "#" },
-//     ],
-//   },
-//   {
-//     name: "Sponsorship",
-//     members: [
-//       { name: "Manish Agarwal", role: "Head", image: "/placeholder.svg", linkedin: "#" },
-//       { name: "Pooja Bhatt", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
-//     ],
-//   },
-//   {
-//     name: "PR & Outreach",
-//     members: [
-//       { name: "Rahul Verma", role: "Head", image: "/placeholder.svg", linkedin: "#" },
-//       { name: "Simran Kaur", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
-//     ],
-//   },
-//   {
-//     name: "Design",
-//     members: [
-//       { name: "Aditya Chopra", role: "Head", image: "/placeholder.svg", linkedin: "#" },
-//       { name: "Maya Iyer", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
-//     ],
-//   },
+  // {
+  //   name: "Technical",
+  //   members: [
+  //     { name: "Karan Thakur", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+  //     { name: "Divya Rao", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+  //     { name: "Suresh Nair", role: "Member", image: "/placeholder.svg", linkedin: "#" },
+  //   ],
+  // },
+  // {
+  //   name: "Sponsorship",
+  //   members: [
+  //     { name: "Manish Agarwal", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+  //     { name: "Pooja Bhatt", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+  //   ],
+  // },
+  // {
+  //   name: "PR & Outreach",
+  //   members: [
+  //     { name: "Rahul Verma", role: "Head", image: "public/images/team/SPD.png", linkedin: "#" },
+  //     { name: "Simran Kaur", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+  //   ],
+  // },
+  // {
+  //   name: "Design",
+  //   members: [
+  //     { name: "Aditya Chopra", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+  //     { name: "Maya Iyer", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+  //   ],
+  // },
  ];
 
 const Team = () => {
