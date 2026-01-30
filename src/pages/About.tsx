@@ -53,10 +53,10 @@ const offerings = [
 
 const stats = [
   { value: 500, suffix: "+", label: "Attendees" },
-  { value: 350000, prefix: "₹", label: "Prize Pool" },
+  { value: 500000, prefix: "₹", label: "Prize Pool" },
   { value: 50, suffix: "+", label: "Startups" },
-  { value: 20, suffix: "+", label: "Investors" },
-  { value: 15, suffix: "+", label: "Sponsors" },
+  { value: 30, suffix: "+", label: "Investors" },
+  { value: 30, suffix: "+", label: "Sponsors" },
   { value: 2, suffix: "", label: "Days of Innovation" },
 ];
 
@@ -120,7 +120,7 @@ const About = () => {
             <span className="gradient-text">About Us</span>
           </h1>
           <p className="font-montserrat text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Where Innovation Meets Opportunity
+            Fueling Entrepreneurship through Innovation
           </p>
         </div>
       </section>
@@ -133,26 +133,21 @@ const About = () => {
               <span className="gradient-text">Our Story</span>
             </h2>
             <div className="prose prose-invert max-w-none">
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Pune Startup Fest is the flagship entrepreneurship event organized
-                by E-CELL, bringing together the brightest minds in the startup
-                ecosystem. What started as a small gathering of aspiring
-                entrepreneurs has grown into one of Maharashtra's largest startup
-                festivals.
-              </p>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Our mission is to foster innovation, provide a platform for
-                budding entrepreneurs to showcase their ideas, and create
-                meaningful connections between startups, investors, and industry
-                leaders.
-              </p>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                With each edition, we aim to push boundaries, introduce new
-                competitions, and provide unparalleled opportunities for learning
-                and growth in the startup space.
-              </p>
+               <div className="flex justify-center gap-4">
+                 <div className="max-w-4xl mx-auto text-center">
+                  <p>
+                Kolhapur Institute of Technology’s College of Engineering Kolhapur
+Established in 1983 by visionary industrialists, seasoned professionals, and esteemed educators, the Kolhapur Institute of Technology’s College of Engineering (Empowered Autonomous) stands as a trailblazer in Engineering and Management education. As Maharashtra’s first self-financed engineering college, it has carved a distinguished legacy shaped by the wisdom and foresight of its founders.
+
+Accredited with an "A+ Grade (CGPA 3.33)" by NAAC, Bengaluru, and housing six NBA-accredited departments—Civil, Computer Science, Environmental, Electronics, Mechanical, and Biotechnology Engineering—the institute exemplifies academic excellence. With Permanent Affiliation to Shivaji University, Kolhapur, and Autonomous status, it has successfully nurtured over 15,000 engineers, bridging academia and industry through robust campus placements and entrepreneurial ventures.
+
+Recognized as a premier institution in Western Maharashtra, it continues to excel in delivering outstanding education, shaping future innovators and leaders.</p>
+
+              
+            </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
@@ -215,18 +210,19 @@ const About = () => {
         </div>
       </section>
 
-      {/* E-CELL Info */}
+      {/* pioneer Info */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-8">
-              <span className="gradient-text">About E-CELL</span>
+              <span className="gradient-text">About Pioneer 2026</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              E-CELL is the entrepreneurship cell dedicated to nurturing the
-              startup culture and fostering innovation among students. Through
-              workshops, mentorship programs, and events like Pune Startup Fest,
-              we aim to create a thriving ecosystem for aspiring entrepreneurs.
+Since its inception in 1998, Pioneer has been a prestigious national-level technical event that serves as a platform for innovation, creativity, and intellectual discourse. Organized by our college, Pioneer brings together bright minds from across the country to showcase their skills and knowledge.
+
+Pioneer features two flagship events: Prakalp, a project presentation where participants exhibit their groundbreaking technical projects, and Abhivyakti, a paper presentation that allows students to present their research, ideas, and solutions to contemporary challenges in the world of technology.
+
+Over the years, Pioneer has grown into a renowned event, fostering collaboration, learning, and competition among future engineers and technologists. With a rich legacy of over two decades, Pioneer continues to inspire, challenge, and recognize excellence in technical fields, making it one of the most awaited events in the academic calendar. This year also marks the excitement of Battle Blitz, a competitive online gaming event.
             </p>
             <div className="flex justify-center gap-4">
               <a
@@ -252,45 +248,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Venue */}
-      <section className="py-16 md:py-24 bg-card">
-        <div className="container mx-auto px-4">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-12 text-center">
-            <span className="gradient-text">Venue</span>
-          </h2>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
-            {/* Map Placeholder */}
-            <div className="aspect-video bg-muted rounded-xl overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                <p className="font-montserrat">Google Maps Embed</p>
-              </div>
-            </div>
-
-            {/* Address */}
-            <div>
-              <h3 className="font-montserrat font-bold text-xl text-foreground mb-4">
-                Event Location
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Convention Center
-                <br />
-                Hinjewadi, Pune
-                <br />
-                Maharashtra, India - 411057
-              </p>
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glow-button font-montserrat text-sm inline-block"
-              >
-                Get Directions
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 };

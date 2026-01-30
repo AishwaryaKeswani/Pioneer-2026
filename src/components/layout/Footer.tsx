@@ -75,11 +75,11 @@ export const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <Mail className="h-4 w-4 mt-0.5 text-primary" />
-                <span>contact@punestartupfest.com</span>
+                <span>kitcoekabhivyakti@gmail.com</span>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <Phone className="h-4 w-4 mt-0.5 text-primary" />
-                <span>+91 98765 43210</span>
+                <span>+91 9322842490</span>
               </li>
               
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
@@ -87,11 +87,11 @@ export const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <Mail className="h-4 w-4 mt-0.5 text-primary" />
-                <span>contact@punestartupfest.com</span>
+                <span>kitcoekprakalp@gmail.com</span>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <Phone className="h-4 w-4 mt-0.5 text-primary" />
-                <span>+91 98765 43210</span>
+                <span>+91 7058626818</span>
               </li>
 
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
@@ -99,11 +99,11 @@ export const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <Mail className="h-4 w-4 mt-0.5 text-primary" />
-                <span>contact@punestartupfest.com</span>
+                <span>rajput.digvijay@kitcoek.in</span>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm">
                 <Phone className="h-4 w-4 mt-0.5 text-primary" />
-                <span>+91 98765 43210</span>
+                <span>+91 9763738262</span>
               </li>
             </ul>
           </div>
