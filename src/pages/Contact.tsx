@@ -129,7 +129,7 @@ const Contact = () => {
                         href="mailto:contact@punestartupfest.com"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        contact.tsx/line 132
+                        pioneer@kitcoek.in
                       </a>
                     </div>
                   </li>
