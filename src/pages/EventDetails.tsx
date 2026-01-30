@@ -61,9 +61,7 @@ const EventDetails = () => {
               <h1 className="font-playfair text-5xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-white via-primary-foreground to-white bg-clip-text text-transparent drop-shadow-sm">
                 {event.title}
               </h1>
-              <p className="font-montserrat text-xl text-primary tracking-[0.2em] uppercase mb-8">
-                {event.tagline}
-              </p>
+          
 
               <div className="glass-card p-8 rounded-2xl border-white/10 bg-card/50 backdrop-blur-md mb-10">
                 <p className="text-lg text-muted-foreground font-montserrat leading-relaxed whitespace-pre-line">
@@ -73,7 +71,7 @@ const EventDetails = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-6">
-                <a href="#register" className="glow-button flex items-center justify-center gap-3 text-base md:text-lg px-8 py-4 font-montserrat tracking-wider">
+                <a href="https://pages.razorpay.com/pl_S6r8iPhNuvOpxJ/view" className="glow-button flex items-center justify-center gap-3 text-base md:text-lg px-8 py-4 font-montserrat tracking-wider">
                   <Sparkles className="w-5 h-5" />
                   REGISTER NOW
                 </a>
