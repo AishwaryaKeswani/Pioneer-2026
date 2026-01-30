@@ -8,20 +8,44 @@ type FilterType = 'all' | 'central' | 'pioneer';
 
 const leadership = [
   {
-    name: "Arjun Patel",
-    role: "President",
+    name: "Dr.Mohan B. Vanarotti",
+    role: "Director,KITCoEK",
     image: "/placeholder.svg",
     linkedin: "#",
   },
   {
-    name: "Sneha Kulkarni",
-    role: "Vice President",
+    name: "Dr.Dattatray Sathe",
+    role: "Registrar,KITCoEK",
     image: "/placeholder.svg",
     linkedin: "#",
   },
   {
-    name: "Rohan Deshmukh",
-    role: "General Secretary",
+    name: "Dr.Jitendra Bhat",
+    role: "Dean, Student Activity KITCoEK",
+    image: "/placeholder.svg",
+    linkedin: "#",
+  },
+  {
+    name: "Prof. Ashwini Shinde",
+    role: "Faculty advisor, ISTE Student Chapter",
+    image: "/placeholder.svg",
+    linkedin: "#",
+  },
+  {
+    name: "Dr.Sandeep Desai ",
+    role: "Convener,Pioneer 2026",
+    image: "/placeholder.svg",
+    linkedin: "#",
+  },
+  {
+    name: "Aditya Patil ",
+    role: "Chairperson",
+    image: "/placeholder.svg",
+    linkedin: "#",
+  },
+  {
+    name: "Sarthak Jadhav",
+    role: "Secretary",
     image: "/placeholder.svg",
     linkedin: "#",
   },
@@ -29,51 +53,62 @@ const leadership = [
 
 const departments = [
   {
-    name: "Operations",
+    name: "Events Head",
     members: [
-      { name: "Amit Sharma", role: "Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Priya Joshi", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Ravi Kumar", role: "Member", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Salikahamad Bagban", role: "Treasurer", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Akash Manwar", role: "Abhivyakti Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Tushar Gangadhare", role: "Prakalp Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Digvijay Rajput", role: "Battle Blitz Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Aishwarya Keswani", role: "Technical Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Aditya Patil", role: "Sponsorship Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Arya Agarwal", role: "Registration and campaigning Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Shriyash Dhole", role: "Printing and Publicity Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Trupti Shendage", role: "Correspondence and Media Head", image: "/placeholder.svg", linkedin: "#" },
     ],
   },
   {
-    name: "Marketing",
+    name: "Events Co-Head",
     members: [
-      { name: "Neha Gupta", role: "Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Vikram Singh", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Anjali Mehta", role: "Member", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Riya Pawaskar", role: "Abhivyakti Co-Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Sanskruti Kuchnure", role: "Prakalp Co-Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Shrawani Choughule", role: "Technical Co-Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Atharva patil", role: "Sponsorship Co-Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Vaishnavi Zambre", role: "Registration Co-Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Sarvesh Sawant", role: "Campaigning Co-Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Sharayu Jagtap", role: "Correspondence Co-Head", image: "/placeholder.svg", linkedin: "#" },
+      { name: "Atharv Kolape", role: "Social Media Co-Head", image: "/placeholder.svg", linkedin: "#" },
     ],
   },
-  {
-    name: "Technical",
-    members: [
-      { name: "Karan Thakur", role: "Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Divya Rao", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Suresh Nair", role: "Member", image: "/placeholder.svg", linkedin: "#" },
-    ],
-  },
-  {
-    name: "Sponsorship",
-    members: [
-      { name: "Manish Agarwal", role: "Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Pooja Bhatt", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
-    ],
-  },
-  {
-    name: "PR & Outreach",
-    members: [
-      { name: "Rahul Verma", role: "Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Simran Kaur", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
-    ],
-  },
-  {
-    name: "Design",
-    members: [
-      { name: "Aditya Chopra", role: "Head", image: "/placeholder.svg", linkedin: "#" },
-      { name: "Maya Iyer", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
-    ],
-  },
-];
+//   {
+//     name: "Technical",
+//     members: [
+//       { name: "Karan Thakur", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+//       { name: "Divya Rao", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+//       { name: "Suresh Nair", role: "Member", image: "/placeholder.svg", linkedin: "#" },
+//     ],
+//   },
+//   {
+//     name: "Sponsorship",
+//     members: [
+//       { name: "Manish Agarwal", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+//       { name: "Pooja Bhatt", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+//     ],
+//   },
+//   {
+//     name: "PR & Outreach",
+//     members: [
+//       { name: "Rahul Verma", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+//       { name: "Simran Kaur", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+//     ],
+//   },
+//   {
+//     name: "Design",
+//     members: [
+//       { name: "Aditya Chopra", role: "Head", image: "/placeholder.svg", linkedin: "#" },
+//       { name: "Maya Iyer", role: "Co-Head", image: "/placeholder.svg", linkedin: "#" },
+//     ],
+//   },
+ ];
 
 const Team = () => {
   const [filter, setFilter] = useState<FilterType>('all');
@@ -218,7 +253,7 @@ const Team = () => {
         </section>
       )}
 
-      {/* Join CTA */}
+      {/* Join CTA
       <section className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-4">
@@ -232,7 +267,7 @@ const Team = () => {
             Become a Volunteer
           </a>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };
