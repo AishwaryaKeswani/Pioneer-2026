@@ -182,9 +182,11 @@
     @apply flex shrink-0 gap-8 animate-marquee;
   }
   
-  .marquee:hover .marquee-content {
-    animation-play-state: paused;
-  }
+  .marquee-content {
+  @apply flex shrink-0 gap-8;
+  animation: marquee 100s linear infinite; /* 🔥 SLOW SPEED */
+}
+
 }
 
 @layer utilities {
