@@ -99,17 +99,17 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Map */}
-              <div className="glass-card p-2 animate-fade-in w-full h-[400px]">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.4545676335933!2d74.2599192749174!3d16.654121284113344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0ffb509926fa9%3A0x9af43eb75ec2804!2sKIT's%20College%20of%20Engineering%20Kolhapur%20(Empowered%20Autonomous)!5e0!3m2!1sen!2sin!4v1769778594737!5m2!1sen!2sin"
-        className="w-full h-full rounded-lg"
-        style={{ border: 0 }}
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title="KIT College of Engineering Kolhapur Map"
-      />
-    </div>
+            <div className="glass-card p-2 animate-fade-in w-full h-[400px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.4545676335933!2d74.2599192749174!3d16.654121284113344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0ffb509926fa9%3A0x9af43eb75ec2804!2sKIT's%20College%20of%20Engineering%20Kolhapur%20(Empowered%20Autonomous)!5e0!3m2!1sen!2sin!4v1769778594737!5m2!1sen!2sin"
+                className="w-full h-full rounded-lg"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="KIT College of Engineering Kolhapur Map"
+              />
+            </div>
 
             {/* Contact Info */}
             <div className="space-y-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
@@ -129,7 +129,7 @@ const Contact = () => {
                         href="mailto:contact@punestartupfest.com"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        contact@punestartupfest.com
+                        contact.tsx/line 132
                       </a>
                     </div>
                   </li>
@@ -140,10 +140,17 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-foreground">Phone</p>
                       <a
-                        href="tel:+919876543210"
+                        href="phone:- +91 8237800585"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        +91 98765 43210
+                        Aishwarya Keswani  - +91 8237800585
+                      </a><br />
+                      <a
+                        href="phone:- +91 8329945496"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+
+                        Shrawani Choughule - +91 8329945496
                       </a>
                     </div>
                   </li>
@@ -154,7 +161,7 @@ const Contact = () => {
                     <div>
                       <p className="font-medium text-foreground">Location</p>
                       <p className="text-muted-foreground">
-                        Pune, Maharashtra, India
+                        Kolhapur, Maharashtra, India
                       </p>
                     </div>
                   </li>
@@ -164,7 +171,7 @@ const Contact = () => {
                 <div className="mt-8 pt-6 border-t border-border">
                   <p className="font-medium text-foreground mb-4">Follow Us</p>
                   <div className="flex gap-4">
-                    
+
                     <a
                       href="#"
                       className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -215,7 +222,7 @@ const Contact = () => {
           <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-12 text-center">
             <span className="gradient-text">Team Contacts</span>
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {contactCards.map((card, index) => (
               <div
@@ -231,7 +238,7 @@ const Contact = () => {
                     {card.title}
                   </h3>
                 </div>
-                
+
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
@@ -247,7 +254,7 @@ const Contact = () => {
                       </a>
                     </div>
                   </li>
-                  
+
                   <li className="flex items-start gap-3">
                     <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
                       <Phone className="h-4 w-4 text-primary" />
@@ -270,7 +277,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ */}
-   <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-4xl font-bold text-center mb-12">
             <span className="gradient-text">Frequently Asked Questions</span>
