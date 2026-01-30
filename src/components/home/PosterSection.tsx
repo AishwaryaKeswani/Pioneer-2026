@@ -26,17 +26,17 @@ export const PosterSection = () => {
               
               {/* Replace src with your actual poster image */}
               <img 
-                src="/placeholder.svg" 
+                src="public\images\home\NewMainPoster.jpg" 
                 alt="Pioneer 2026 Event Poster" 
                 className="w-full h-full object-cover opacity-90 transition-opacity duration-300 group-hover:opacity-100"
               />
               
               {/* Hover Overlay Text (Optional) */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-sm">
+              {/* <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-sm">
                 <span className="text-white font-playfair text-2xl font-bold tracking-widest border border-white/30 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md">
                   EXPLORE
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

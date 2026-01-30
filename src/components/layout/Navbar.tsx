@@ -43,12 +43,11 @@ export const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2">
               <div className="font-montserrat font-bold text-xl md:text-2xl">
-                <img 
+               <img 
   src="public/images/home/Reel LOGO Lelo.png"
   alt="Logo"
   className="h-10 w-auto rounded-lg relative z-10 transition-transform duration-300 group-hover:scale-105"
 />
-
               </div>
             </Link>
 
