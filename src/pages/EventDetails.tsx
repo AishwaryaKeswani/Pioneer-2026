@@ -44,7 +44,7 @@ const EventDetails = () => {
             Back to all events
           </Link>
 
-          {/* --- Main Hero Section (Existing Layout) --- */}
+          {/* --- Main Hero Section --- */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
             {/* Left Column: Content */}
             <div className="order-2 lg:order-1 animate-slide-right">
@@ -61,7 +61,7 @@ const EventDetails = () => {
               <h1 className="font-playfair text-5xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-white via-primary-foreground to-white bg-clip-text text-transparent drop-shadow-sm">
                 {event.title}
               </h1>
-          
+              
 
               <div className="glass-card p-8 rounded-2xl border-white/10 bg-card/50 backdrop-blur-md mb-10">
                 <p className="text-lg text-muted-foreground font-montserrat leading-relaxed whitespace-pre-line">
@@ -71,7 +71,13 @@ const EventDetails = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-6">
-                <a href="https://pages.razorpay.com/pl_S6r8iPhNuvOpxJ/view" className="glow-button flex items-center justify-center gap-3 text-base md:text-lg px-8 py-4 font-montserrat tracking-wider">
+                {/* 1. Updated Register Button to use event.registrationLink */}
+                <a 
+                  href={event.registrationLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="glow-button flex items-center justify-center gap-3 text-base md:text-lg px-8 py-4 font-montserrat tracking-wider"
+                >
                   <Sparkles className="w-5 h-5" />
                   REGISTER NOW
                 </a>
@@ -110,10 +116,10 @@ const EventDetails = () => {
             </div>
           </div>
 
-          {/* --- New Information Sections --- */}
+          {/* --- Information Sections --- */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            {/* 1. Prize Distribution */}
+            {/* Prize Distribution */}
             <div className="group relative rounded-2xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="absolute -inset-[1px] bg-gradient-to-r from-gold via-amber-500 to-gold rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
               <div className="relative h-full glass-card p-8 bg-card/40 backdrop-blur-md border-white/10 rounded-2xl overflow-hidden">
@@ -145,7 +151,7 @@ const EventDetails = () => {
               </div>
             </div>
 
-            {/* 2. Registration Details */}
+            {/* Registration Details */}
             <div className="group relative rounded-2xl animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="absolute -inset-[1px] bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
               <div className="relative h-full glass-card p-8 bg-card/40 backdrop-blur-md border-white/10 rounded-2xl">
@@ -166,14 +172,20 @@ const EventDetails = () => {
                       <span className="text-xl font-bold font-playfair">{event.registrationDetails.teamSize}</span>
                    </div>
                    
-                   <a href="#register" className="inline-flex items-center justify-center w-full py-3 mt-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-montserrat font-bold tracking-wide transition-colors">
+                   {/* 2. Updated Secondary Register Button */}
+                   <a 
+                     href={event.registrationLink} 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     className="inline-flex items-center justify-center w-full py-3 mt-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-montserrat font-bold tracking-wide transition-colors"
+                   >
                       Register Now
                    </a>
                 </div>
               </div>
             </div>
 
-            {/* 3. Rules & Regulations */}
+            {/* Rules & Regulations */}
             <div className="group relative rounded-2xl animate-fade-in md:col-span-2 lg:col-span-1" style={{ animationDelay: '0.4s' }}>
               <div className="absolute -inset-[1px] bg-gradient-to-r from-red-500 via-pink-500 to-red-500 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
               <div className="relative h-full glass-card p-8 bg-card/40 backdrop-blur-md border-white/10 rounded-2xl">
@@ -195,7 +207,7 @@ const EventDetails = () => {
               </div>
             </div>
 
-            {/* 4. Contact Information */}
+            {/* Contact Information */}
             <div className="group relative rounded-2xl animate-fade-in md:col-span-2 lg:col-span-1" style={{ animationDelay: '0.5s' }}>
               <div className="absolute -inset-[1px] bg-gradient-to-r from-green-500 via-emerald-400 to-green-500 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></div>
               <div className="relative h-full glass-card p-8 bg-card/40 backdrop-blur-md border-white/10 rounded-2xl">

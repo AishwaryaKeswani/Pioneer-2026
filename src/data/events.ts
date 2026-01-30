@@ -11,6 +11,7 @@ export interface Event {
   icon: any;
   date: string;
   // New Fields
+  registrationLink: string;
   prizes: {
     first: string;
     second: string;
@@ -83,6 +84,7 @@ The event provides a platform for students to:
     image: "/placeholder.svg", 
     icon: Bot,
     date: "Feb 21, 2026",
+    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
      prizes: {
     first: "₹ 60,000",
     second: "₹ 45,000",
@@ -149,6 +151,7 @@ NON-CIRCUIT DOMAIN:
     image: "/placeholder.svg", 
     icon: Bot,
     date: "Feb 21, 2026",
+    registrationLink: "https://google.com",
     prizes: {
     first: "₹ 30,000",
     second: "₹ 20,000",
@@ -195,6 +198,7 @@ As per rules of qualification, Qualified teams are shortlisted for finale
     image: "/placeholder.svg", 
     icon: Bot,
     date: "Feb 22, 2026",
+    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
     prizes: {
     first: "₹UPTO Rs.20,000",
     second: "",
@@ -233,6 +237,7 @@ As per rules of qualification, Qualified teams are shortlisted for finale`,
     image: "/placeholder.svg",
     icon: Database,
     date: "Feb 22, 2026",
+    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
     ...commonEventData
   },
   {
@@ -245,6 +250,7 @@ As per rules of qualification, Qualified teams are shortlisted for finale`,
     image: "/placeholder.svg",
     icon: Globe,
     date: "Feb 21, 2026",
+    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
     ...commonEventData
   },
   {
@@ -257,6 +263,7 @@ As per rules of qualification, Qualified teams are shortlisted for finale`,
     image: "/placeholder.svg",
     icon: Lightbulb,
     date: "Feb 22, 2026",
+    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
     ...commonEventData
   },
 ];
