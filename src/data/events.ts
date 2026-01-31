@@ -148,7 +148,7 @@ NON-CIRCUIT DOMAIN:
 4. Industry 5.0/4.0 
 5.Sustainable & Green Engg. solutions for Env. Management 
 6. Recent trends related to other engineering domains.`,
-    image: "public/images/events/abhivyakti.jpeg", 
+    image: "images/events/abhivyakti.jpeg", 
     icon: Bot,
     date: "Feb 21, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6rAtaqsKcdRR3/view",
@@ -419,7 +419,7 @@ Participants can take part individually or in teams of up to four members. Each 
     
    The competition begins with interactive games through which teams earn virtual resources. These resources are then used in a live auction to bid for construction materials. Using only the materials acquired, teams must design and build an efficient structure within the given time limit and resource constraints.
     `,
-    image: "public/images/events/Master Bidder.jpg",
+    image: "images/events/Master Bidder.jpg",
     icon: Database,
     date: "Feb 21, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6s38kAHqsb64f/view",
@@ -548,7 +548,7 @@ Participants can present their work based on themes such as:
 4.Water Conservation and Management. 
 
 Entries may be in the form of a PowerPoint presentation or a physical prototype model.`,
-    image: "public/images/events/envision.jpeg",
+    image: "images/events/envision.jpeg",
     icon: Database,
     date: "Feb 22, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6sDi5warNhBUC/view",
@@ -590,7 +590,7 @@ The competition consists of three rounds:
 1.Technical Quiz to assess core engineering concepts.
 2.Debate round to test communication and critical thinking. 
 3.Presentation round where participants present technical topics or ideas.`,
-    image: "public/images/events/Tech Nexus.jpeg",
+    image: "images/events/Tech Nexus.jpeg",
     icon: Database,
     date: "Feb 22, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6s6dEUQsypPOc/view",
