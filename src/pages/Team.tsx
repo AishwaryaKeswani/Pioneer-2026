@@ -17,7 +17,7 @@ const leadership = [
     name: "Dr.Dattatray Sathe",
     role: "Registrar,KITCoEK",
     image: "public/images/team/Sathe Sir.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/dr-d-j-sathe-55b768a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Dr.Jitendra Bhat",
@@ -35,7 +35,7 @@ const leadership = [
     name: "Dr.Sandeep Desai ",
     role: "Convener,Pioneer 2026",
     image: "public/images/team/SPD.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/sandeep-desai-2a02981a3",
   },
   {
     name: "Aditya Patil ",
@@ -47,7 +47,7 @@ const leadership = [
     name: "Sarthak Jadhav",
     role: "Secretary",
     image: "public/team/sarthak-jadhav.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/sarthak-jadhav-5846a0352?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
 ];
 
@@ -71,9 +71,9 @@ const departments = [
     members: [
       { name: "Riya Pawaskar", role: "Abhivyakti Co-Head", image: "public/team/riya-pawaskar.png", linkedin: "#" },
       { name: "Sanskruti Kuchnure", role: "Prakalp Co-Head", image: "public/team/sanskruti -kuchnure.png", linkedin: "https://www.linkedin.com/in/sanskruti-kuchnure-0a25682b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Shrawani Choughule", role: "Technical Co-Head", image: "public/team/shrawani -choughule.png", linkedin: "#" },
+      { name: "Shrawani Choughule", role: "Technical Co-Head", image: "public/team/shrawani -choughule.png", linkedin: "https://www.linkedin.com/in/shrawani-choughule-3aa248354?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Atharva patil", role: "Sponsorship Co-Head", image: "public/team/atharva-patil.png", linkedin: "https://www.linkedin.com/in/atharva-patil-4107b53a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Vaishnavi Zambre", role: "Registration Co-Head", image: "public/team/vaishvani -zambare.png", linkedin: "#" },
+      { name: "Vaishnavi Zambre", role: "Registration Co-Head", image: "public/team/vaishvani -zambare.png", linkedin: "https://www.linkedin.com/in/vaishanvi-zambre-236059376" },
       { name: "Sarvesh Sawant", role: "Campaigning Co-Head", image: "public/team/sarvesh -sawant.png", linkedin: "https://www.linkedin.com/in/sarveshsawant45" },
       { name: "Sharayu Jagtap", role: "Correspondence Co-Head", image: "public/team/sharayu -jagtap.png", linkedin: "#" },
       { name: "Atharv Kolape", role: "Social Media Co-Head", image: "public/team/atharv-kolape.png", linkedin: "#" },
