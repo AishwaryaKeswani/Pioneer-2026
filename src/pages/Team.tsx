@@ -41,7 +41,7 @@ const leadership = [
     name: "Aditya Patil ",
     role: "Chairperson",
     image: "public/team/Aditya-patil.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/aditya-patil-62a422346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Sarthak Jadhav",
@@ -60,7 +60,7 @@ const departments = [
       { name: "Tushar Gangadhare", role: "Prakalp Head", image: "public/team/tushar -gangadhare.png", linkedin: "https://www.linkedin.com/in/tushar-gangadhare-a091172b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
       { name: "Digvijay Rajput", role: "Battle Blitz Head", image: "public/team/digvijay-rajput.png", linkedin: "www.linkedin.com/in/digvijay-" },
       { name: "Aishwarya Keswani", role: "Technical Head", image: "public/team/aishwarya -keswani.png", linkedin: "https://www.linkedin.com/in/aishwarya-keswani-6760412b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Aditya Patil", role: "Sponsorship Head", image: "public/team/Aditya-patil.png", linkedin: "#" },
+      { name: "Aditya Patil", role: "Sponsorship Head", image: "public/team/Aditya-patil.png", linkedin: "https://www.linkedin.com/in/aditya-patil-62a422346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Arya Agarwal", role: "Registration and campaigning Head", image: "public/team/arya-agarwal.png", linkedin: "https://www.linkedin.com/in/aarya-agarwal27?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
       { name: "Shriyash Dhole", role: "Printing and Publicity Head", image: "public/team/shriyash-dhole.png", linkedin: "https://www.linkedin.com/in/shriyash-dhole-17177630a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Trupti Shendage", role: "Correspondence and Media Head", image: "public/team/trupti-shendge.png", linkedin: "https://www.linkedin.com/in/trupti-shendage-ab26883a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
