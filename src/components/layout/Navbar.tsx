@@ -71,7 +71,7 @@ export const Navbar = () => {
             {/* CTA Button */}
             <div className="hidden md:block">
               <a
-                href="#register"
+                href="/events"
                 className="glow-button font-montserrat text-sm"
               >
                 Register Now

@@ -1,4 +1,12 @@
 import { ChevronDown } from "lucide-react";
+const navLinks = [
+  { name: "Home", path: "/" },
+  { name: "Events", path: "/events" },
+  { name: "Sponsors", path: "/sponsors" },
+  { name: "Team", path: "/team" },
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
+];
 
 export const HeroSection = () => {
   return (
@@ -130,10 +138,10 @@ export const HeroSection = () => {
           style={{ animationDelay: "0.8s" }}
         >
           <a
-            href="#register"
+            href="/events"
             className="glow-button font-montserrat text-base md:text-lg px-10 py-4 inline-block"
           >
-            REGISTER NOW
+            JOIN NOW
           </a>
         </div>
 

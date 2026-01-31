@@ -55,7 +55,7 @@ const Sponsors = () => {
       <section className="pt-32 pb-16 md:pt-40 md:pb-24 animated-gradient-bg relative">
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
-            <span className="gradient-text">Sponsors & Partners</span>
+            <span className="gradient-text">Our Proud Sponsors</span>
           </h1>
           <p
             className="font-montserrat text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto animate-fade-in"

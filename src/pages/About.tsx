@@ -13,42 +13,25 @@ import {
 } from "lucide-react";
 
 const offerings = [
-  {
-    icon: Users,
-    title: "Networking",
-    description:
-      "Connect with entrepreneurs, investors, and industry experts from across the country.",
-  },
+ 
   {
     icon: BookOpen,
-    title: "Mentorship",
+    title: "Learning",
     description:
-      "Get guidance from successful founders and seasoned business professionals.",
+      "Opportunities to learn, innovate, and grow",
   },
   {
     icon: Trophy,
-    title: "Pitch Competitions",
+    title: "Creativity",
     description:
-      "Showcase your ideas and compete for prizes worth ₹3,50,000.",
+      "A platform to showcase talent and innovation",
   },
   {
     icon: TrendingUp,
-    title: "Investment Connections",
+    title: "Growth",
     description:
-      "Meet angel investors and VCs looking for their next big investment.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Knowledge Sessions",
-    description:
-      "Learn from expert-led workshops and panel discussions on trending topics.",
-  },
-  {
-    icon: Building,
-    title: "Exhibition Space",
-    description:
-      "Showcase your startup to thousands of visitors in our exhibition hall.",
-  },
+      "Commitment to growth and success",
+  }
 ];
 
 const stats = [

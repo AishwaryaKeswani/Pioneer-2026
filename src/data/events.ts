@@ -84,7 +84,7 @@ The event provides a platform for students to:
     image: "/images/events/abhivyakti.jpeg", 
     icon: Bot,
     date: "Feb 21, 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6r8iPhNuvOpxJ/view",
      prizes: {
     first: "₹ 60,000",
     second: "₹ 45,000",
@@ -151,7 +151,7 @@ NON-CIRCUIT DOMAIN:
     image: "public/images/events/abhivyakti.jpeg", 
     icon: Bot,
     date: "Feb 21, 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6rAtaqsKcdRR3/view",
     prizes: {
     first: "₹ 30,000",
     second: "₹ 20,000",
@@ -198,7 +198,7 @@ As per rules of qualification, Qualified teams are shortlisted for finale
     image: "/images/events/abhivyakti.jpeg", 
     icon: Bot,
     date: "Feb 15th /Feb 22nd , 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6rF2neb7AMwA0/view",
     prizes: {
     first: "₹UPTO Rs.20,000",
     second: "",
@@ -250,7 +250,7 @@ Round 3: Coding
     image: "/images/events/stranger-code.jpeg",
     icon: Database,
     date: "Feb 21, 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6rIBZC7b5sFEz/view",
     
     prizes: {
     first: "₹ 5,000",
@@ -302,7 +302,7 @@ conduct throughout the event.
     image: "/images/events/beyond-resume.jpeg",
     icon: Database,
     date: "Feb 22, 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6rKRnpWfB9iPC/view",
     
     prizes: {
     first: "₹ 5,000",
@@ -343,7 +343,7 @@ conduct throughout the event.
     image: "/images/events/strange-minds.jpeg",
     icon: Database,
     date: "Feb 22, 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6s8KfAEQXHFSQ/view",
     
     prizes: {
     first: "₹ 5,000",
@@ -380,7 +380,7 @@ Participants can take part individually or in teams of up to four members. Each 
     image: "/images/events/idea-forged.jpeg",
     icon: Database,
     date: "Feb 21, 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6rP9UhaMWtZin/view",
     
     prizes: {
     first: "₹ 5,000",
@@ -419,10 +419,10 @@ Participants can take part individually or in teams of up to four members. Each 
     
    The competition begins with interactive games through which teams earn virtual resources. These resources are then used in a live auction to bid for construction materials. Using only the materials acquired, teams must design and build an efficient structure within the given time limit and resource constraints.
     `,
-    image: "/placeholder.svg",
+    image: "public/images/events/Master Bidder.jpg",
     icon: Database,
     date: "Feb 21, 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6s38kAHqsb64f/view",
     
     prizes: {
     first: "₹ 5,000",
@@ -466,7 +466,7 @@ Tech-Negotia provides students with exposure to business pitching, investment si
     image: "/images/events/tech-negotia.jpeg",
     icon: Database,
     date: "Feb 21, 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6rLrbGpmxkKPx/view",
     
     prizes: {
     first: "₹ 5,000",
@@ -508,7 +508,7 @@ Round 3: teams must design and build a working circuit using the collected compo
     image: "/images/events/rush-to-green.jpeg",
     icon: Database,
     date: "Feb 21, 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6s0tEQTrR3Ob9/view",
     
     prizes: {
     first: "₹ 5,000",
@@ -548,10 +548,10 @@ Participants can present their work based on themes such as:
 4.Water Conservation and Management. 
 
 Entries may be in the form of a PowerPoint presentation or a physical prototype model.`,
-    image: "/placeholder.svg",
+    image: "public/images/events/envision.jpeg",
     icon: Database,
     date: "Feb 22, 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6sDi5warNhBUC/view",
     
     prizes: {
     first: "₹ 5,000",
@@ -590,10 +590,10 @@ The competition consists of three rounds:
 1.Technical Quiz to assess core engineering concepts.
 2.Debate round to test communication and critical thinking. 
 3.Presentation round where participants present technical topics or ideas.`,
-    image: "/placeholder.svg",
+    image: "public/images/events/Tech Nexus.jpeg",
     icon: Database,
     date: "Feb 22, 2026",
-    registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
+    registrationLink: "https://pages.razorpay.com/pl_S6s6dEUQsypPOc/view",
     
     prizes: {
     first: "₹ 5,000",
