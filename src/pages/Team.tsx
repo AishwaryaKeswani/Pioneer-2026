@@ -57,13 +57,13 @@ const departments = [
     members: [
       { name: "Salikahamad Bagban", role: "Treasurer", image: "public/images/team/Mr. Salikahmad Bagwan (2).png", linkedin: "https://www.linkedin.com/in/salikahamad-bagwan-1758a5298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Akash Manwar", role: "Abhivyakti Head", image: "public/images/team/Mr. Akash Manwar (2).png", linkedin: "https://www.linkedin.com/in/akash-manwar-80a3322b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Tushar Gangadhare", role: "Prakalp Head", image: "public/images/team/Mr. Tushar Gangadhare (2).png", linkedin: "#" },
+      { name: "Tushar Gangadhare", role: "Prakalp Head", image: "public/images/team/Mr. Tushar Gangadhare (2).png", linkedin: "https://www.linkedin.com/in/tushar-gangadhare-a091172b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
       { name: "Digvijay Rajput", role: "Battle Blitz Head", image: "public/images/team/Mr. Digvijay Rajput (2).png", linkedin: "www.linkedin.com/in/digvijay-" },
       { name: "Aishwarya Keswani", role: "Technical Head", image: "public/images/team/Ms. Aishwarya Keswani (2).png", linkedin: "https://www.linkedin.com/in/aishwarya-keswani-6760412b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Aditya Patil", role: "Sponsorship Head", image: "public/images/team/Mr. Aditya Patil (2).png", linkedin: "#" },
       { name: "Arya Agarwal", role: "Registration and campaigning Head", image: "public/images/team/Ms. Aarya Agarwal (2).png", linkedin: "https://www.linkedin.com/in/aarya-agarwal27?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
       { name: "Shriyash Dhole", role: "Printing and Publicity Head", image: "public/images/team/Mr. Shriyansh Dhole (2).png", linkedin: "https://www.linkedin.com/in/shriyash-dhole-17177630a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Trupti Shendage", role: "Correspondence and Media Head", image: "public/images/team/Ms. Trupti Shendage (2).png", linkedin: "#" },
+      { name: "Trupti Shendage", role: "Correspondence and Media Head", image: "public/images/team/Ms. Trupti Shendage (2).png", linkedin: "https://www.linkedin.com/in/trupti-shendage-ab26883a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ],
   },
   {
