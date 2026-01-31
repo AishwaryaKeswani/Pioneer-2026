@@ -10,43 +10,43 @@ const leadership = [
   {
     name: "Dr.Mohan B. Vanarotti",
     role: "Director,KITCoEK",
-    image: "images/team/director.png",
+    image: "public/images/team/director.png",
     linkedin: "https://www.linkedin.com/in/mohanvanarotti?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Dr.Dattatray Sathe",
     role: "Registrar,KITCoEK",
-    image: "images/team/Sathe Sir.png",
+    image: "public/images/team/Sathe Sir.png",
     linkedin: "#",
   },
   {
     name: "Dr.Jitendra Bhat",
     role: "Dean, Student Activity KITCoEK",
-    image: "images/team/JS bhat.png",
+    image: "public/images/team/JS bhat.png",
     linkedin: "https://www.linkedin.com/in/dr-jitendra-shankarrao-bhat-137013254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Prof. Ashwini Shinde",
     role: "Faculty advisor, ISTE Student Chapter",
-    image: "images/team/Ashwini Shinde.png",
+    image: "public/images/team/Ashwini Shinde.png",
     linkedin: "https://www.linkedin.com/in/ashwini-shinde-06b472a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_ap",
   },
   {
     name: "Dr.Sandeep Desai ",
     role: "Convener,Pioneer 2026",
-    image: "images/team/SPD.png",
+    image: "public/images/team/SPD.png",
     linkedin: "#",
   },
   {
     name: "Aditya Patil ",
     role: "Chairperson",
-    image: "images/team/Mr. Aditya Patil (2).png",
+    image: "public/images/team/Mr. Aditya Patil (2).png",
     linkedin: "#",
   },
   {
     name: "Sarthak Jadhav",
     role: "Secretary",
-    image: "images/team/Mr. Sarthak Jadhav (2).png",
+    image: "public/images/team/Mr. Sarthak Jadhav (2).png",
     linkedin: "#",
   },
 ];
@@ -55,28 +55,28 @@ const departments = [
   {
     name: "Events Head",
     members: [
-      { name: "Salikahamad Bagban", role: "Treasurer", image: "images/team/Mr. Salikahmad Bagwan (2).png", linkedin: "#" },
-      { name: "Akash Manwar", role: "Abhivyakti Head", image: "images/team/Mr. Akash Manwar (2).png", linkedin: "#" },
-      { name: "Tushar Gangadhare", role: "Prakalp Head", image: "images/team/Mr. Tushar Gangadhare (2).png", linkedin: "#" },
-      { name: "Digvijay Rajput", role: "Battle Blitz Head", image: "images/team/Mr. Digvijay Rajput (2).png", linkedin: "#" },
-      { name: "Aishwarya Keswani", role: "Technical Head", image: "images/team/Ms. Aishwarya Keswani (2).png", linkedin: "https://www.linkedin.com/in/aishwarya-keswani-6760412b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-      { name: "Aditya Patil", role: "Sponsorship Head", image: "images/team/Mr. Aditya Patil (2).png", linkedin: "#" },
-      { name: "Arya Agarwal", role: "Registration and campaigning Head", image: "images/team/Ms. Aarya Agarwal (2).png", linkedin: "https://www.linkedin.com/in/aarya-agarwal27?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
-      { name: "Shriyash Dhole", role: "Printing and Publicity Head", image: "images/team/Mr. Shriyansh Dhole (2).png", linkedin: "#" },
-      { name: "Trupti Shendage", role: "Correspondence and Media Head", image: "images/team/Ms. Trupti Shendage (2).png", linkedin: "#" },
+      { name: "Salikahamad Bagban", role: "Treasurer", image: "public/images/team/Mr. Salikahmad Bagwan (2).png", linkedin: "#" },
+      { name: "Akash Manwar", role: "Abhivyakti Head", image: "public/images/team/Mr. Akash Manwar (2).png", linkedin: "#" },
+      { name: "Tushar Gangadhare", role: "Prakalp Head", image: "public/images/team/Mr. Tushar Gangadhare (2).png", linkedin: "#" },
+      { name: "Digvijay Rajput", role: "Battle Blitz Head", image: "public/images/team/Mr. Digvijay Rajput (2).png", linkedin: "#" },
+      { name: "Aishwarya Keswani", role: "Technical Head", image: "public/images/team/Ms. Aishwarya Keswani (2).png", linkedin: "https://www.linkedin.com/in/aishwarya-keswani-6760412b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Aditya Patil", role: "Sponsorship Head", image: "public/images/team/Mr. Aditya Patil (2).png", linkedin: "#" },
+      { name: "Arya Agarwal", role: "Registration and campaigning Head", image: "public/images/team/Ms. Aarya Agarwal (2).png", linkedin: "https://www.linkedin.com/in/aarya-agarwal27?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
+      { name: "Shriyash Dhole", role: "Printing and Publicity Head", image: "public/images/team/Mr. Shriyansh Dhole (2).png", linkedin: "#" },
+      { name: "Trupti Shendage", role: "Correspondence and Media Head", image: "public/images/team/Ms. Trupti Shendage (2).png", linkedin: "#" },
     ],
   },
   {
     name: "Events Co-Head",
     members: [
-      { name: "Riya Pawaskar", role: "Abhivyakti Co-Head", image: "images/team/MS. Riya Pawaskar (2).png", linkedin: "#" },
-      { name: "Sanskruti Kuchnure", role: "Prakalp Co-Head", image: "images/team/Ms. Sanskruti Kuchnure (2).png", linkedin: "#" },
-      { name: "Shrawani Choughule", role: "Technical Co-Head", image: "images/team/Ms. Shrawani Chougule.png", linkedin: "#" },
-      { name: "Atharva patil", role: "Sponsorship Co-Head", image: "/images/team/Atharva Patil (2).png", linkedin: "#" },
-      { name: "Vaishnavi Zambre", role: "Registration Co-Head", image: "images/team/Ms. Vaishnavi Zambre (2).png", linkedin: "#" },
-      { name: "Sarvesh Sawant", role: "Campaigning Co-Head", image: "images/team/Sarvesh Sawant.png", linkedin: "https://www.linkedin.com/in/sarveshsawant45" },
-      { name: "Sharayu Jagtap", role: "Correspondence Co-Head", image: "images/team/Ms. Sharayu Jagtap (2).png", linkedin: "#" },
-      { name: "Atharv Kolape", role: "Social Media Co-Head", image: "images/team/Mr. Atharv Kolape (2).png", linkedin: "#" },
+      { name: "Riya Pawaskar", role: "Abhivyakti Co-Head", image: "public/images/team/MS. Riya Pawaskar (2).png", linkedin: "#" },
+      { name: "Sanskruti Kuchnure", role: "Prakalp Co-Head", image: "public/images/team/Ms. Sanskruti Kuchnure (2).png", linkedin: "#" },
+      { name: "Shrawani Choughule", role: "Technical Co-Head", image: "public/images/team/Ms. Shrawani Chougule.png", linkedin: "#" },
+      { name: "Atharva patil", role: "Sponsorship Co-Head", image: "/public/images/team/Atharva Patil (2).png", linkedin: "#" },
+      { name: "Vaishnavi Zambre", role: "Registration Co-Head", image: "public/images/team/Ms. Vaishnavi Zambre (2).png", linkedin: "#" },
+      { name: "Sarvesh Sawant", role: "Campaigning Co-Head", image: "public/images/team/Sarvesh Sawant.png", linkedin: "https://www.linkedin.com/in/sarveshsawant45" },
+      { name: "Sharayu Jagtap", role: "Correspondence Co-Head", image: "public/images/team/Ms. Sharayu Jagtap (2).png", linkedin: "#" },
+      { name: "Atharv Kolape", role: "Social Media Co-Head", image: "public/images/team/Mr. Atharv Kolape (2).png", linkedin: "#" },
     ],
   },
   // {
@@ -168,17 +168,17 @@ const Team = () => {
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   {/* Profile Image */}
-                  <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-r from-primary via-secondary to-accent p-[3px]">
-
-                    <img
-                     src={member.image}
-                     alt={member.name}
-                     className="w-full h-full rounded-full object-contain p-2"
-                    />
+                  <div className="relative w-32 h-32 mx-auto mb-6">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-accent p-[3px] animate-pulse-glow">
+                      <div className="w-full h-full rounded-full bg-card overflow-hidden">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     </div>
-
-
-                    
+                  </div>
 
                   <h3 className="font-montserrat font-bold text-xl text-foreground mb-1">
                     {member.name}
@@ -219,16 +219,17 @@ const Team = () => {
                       style={{ animationDelay: `${(deptIndex * 0.1) + (index * 0.05)}s` }}
                     >
                       {/* Profile Image */}
-                      <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-r from-primary to-secondary p-[2px]">
-  <img
-    src={member.image}
-    alt={member.name}
-    className="w-full h-full rounded-full object-contain p-1 transition-transform duration-300 group-hover:scale-105"
-  />
-</div>
-
-
-
+                      <div className="relative w-20 h-20 mx-auto mb-4 overflow-hidden rounded-full">
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary p-[2px]">
+                          <div className="w-full h-full rounded-full bg-card overflow-hidden">
+                            <img
+                              src={member.image}
+                              alt={member.name}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            />
+                          </div>
+                        </div>
+                      </div>
 
                       <h4 className="font-montserrat font-semibold text-foreground text-sm mb-1">
                         {member.name}
