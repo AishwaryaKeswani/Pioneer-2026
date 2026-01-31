@@ -453,7 +453,7 @@ Participants can take part individually or in teams of up to four members. Each 
   {
     id: "Tech-Negotia",
     title: "Tech-Negotia",
-    category: "Innovation, Entrepreneurship & Business Strategy",
+    category: "Innovation",
     type: 'departmental',
     shortDescription: "Tech-Negotia is a fast-paced business and innovation challenge where teams solve real-world problems and pitch solutions in an investor-style format. It blends creativity, strategy, and decision-making in a competitive environment.",
     fullDescription: `Tech-Negotia is a dynamic departmental event organized by CABSSA (Computer Science and Business Systems Student’s Association) under PIONEER 2026. The event is designed to test participants’ problem-solving abilities, business thinking, creativity, and pitching skills through multiple competitive rounds.
