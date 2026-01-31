@@ -136,12 +136,9 @@ const About = () => {
                <div className="flex justify-center gap-4">
                  <div className="max-w-4xl mx-auto text-center">
                   <p>
-                Kolhapur Institute of Technology’s College of Engineering Kolhapur
-Established in 1983 by visionary industrialists, seasoned professionals, and esteemed educators, the Kolhapur Institute of Technology’s College of Engineering (Empowered Autonomous) stands as a trailblazer in Engineering and Management education. As Maharashtra’s first self-financed engineering college, it has carved a distinguished legacy shaped by the wisdom and foresight of its founders.
+               Established in 1983 by a cadre of visionary industrialists, seasoned professionals, and esteemed educationalists, the Kolhapur Institute of Technology’s College of Engineering Kolhapur(Empowered Autonomous) stands as a premier institution in the realm of Engineering and Management education. Pioneering as the first self-financed engineering college in Maharashtra, the institute boasts a distinguished identity shaped by the extensive exposure and wisdom of its founders. Elevating its stature, the institute has been honoured with an "A+ Grade Status with CGPA 3.33" by The National Assessment and Accreditation Council (NAAC), Bengaluru. Furthermore, it has attained accreditation for six departments—Civil Engineering, Computer Science & Engineering, Environmental Engineering, Electronics Engineering, Mechanical Engineering, and Bio Technology Engineering from the prestigious National Board of Accreditation (NBA), New Delhi, a governmental body renowned for accrediting programs in institutes.
 
-Accredited with an "A+ Grade (CGPA 3.33)" by NAAC, Bengaluru, and housing six NBA-accredited departments—Civil, Computer Science, Environmental, Electronics, Mechanical, and Biotechnology Engineering—the institute exemplifies academic excellence. With Permanent Affiliation to Shivaji University, Kolhapur, and Autonomous status, it has successfully nurtured over 15,000 engineers, bridging academia and industry through robust campus placements and entrepreneurial ventures.
-
-Recognized as a premier institution in Western Maharashtra, it continues to excel in delivering outstanding education, shaping future innovators and leaders.</p>
+Notably, the institute has secured Permanent Affiliation from Shivaji University Kolhapur and proudly holds Autonomous status. Undeniably committed to excellence, the institution has shepherded more than 15,000 engineers to success, seamlessly bridging the gap between academia and industry through campus placements and fostering a legion of entrepreneurs. In Western Maharashtra, it stands tall as a beacon of prominence and success in the realm of Engineering Education, diligently delivering optimal results for its students and stakeholders.</p>
 
               
             </div>

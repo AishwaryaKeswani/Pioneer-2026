@@ -12,7 +12,6 @@ const featuredSponsors = [
 const partners = [
   { name: "TPE", logo: "public/images/sponsors/tpe.jpeg" },
   { name: "Maruti Sujuki", logo: "public/images/sponsors/maruti.jpeg" },
- // { name: "Vision 3", logo: "/images/sponsors/vision3.jpeg" },
   { name: "Vanita Agro", logo: "public/images/sponsors/vanita.jpeg" },
   { name: "Mahindra", logo: "public/images/sponsors/mahindrasports.jpeg" },
   { name: "Shanti", logo: "public/images/sponsors/shanti.jpeg" },
@@ -20,7 +19,6 @@ const partners = [
   { name: "Superhero", logo: "public/images/sponsors/superhero.jpeg" },
   { name: "Menon Bearings", logo: "public/images/sponsors/menon.jpeg" },
   { name: "Manchester", logo: "public/images/sponsors/manchester.jpeg" },
- 
   { name: "mahalaxmi ", logo: "public/images/sponsors/mahalaxmi motors.jpeg" },
   { name: "synergic", logo: "public/images/sponsors/synergy.jpeg" },
   { name: "37", logo: "public/images/sponsors/vision.jpeg" },
@@ -33,7 +31,6 @@ const partners = [
   { name: "18", logo: "public/images/sponsors/dharti.jpeg" },
   { name: "19", logo: "public/images/sponsors/KR motors.jpeg" },
   { name: "20", logo: "public/images/sponsors/tata chetan.jpeg" },
-
   { name: "21", logo: "public/images/sponsors/aaira.jpeg" },
   { name: "22", logo: "public/images/sponsors/tumbledry.jpeg" },
   { name: "23", logo: "public/images/sponsors/adms.jpeg" },
@@ -44,13 +41,11 @@ const partners = [
   { name: "28", logo: "public/images/sponsors/puja fabriceters.jpeg" },
   { name: "29", logo: "public/images/sponsors/natural grp.jpeg" },
   { name: "30", logo: "public/images/sponsors/ravikiran.jpeg" },
-
   { name: "31", logo: "public/images/sponsors/mirachi.jpeg" },
   { name: "32", logo: "public/images/sponsors/languageberg.jpeg" },
   { name: "33", logo: "public/images/sponsors/infogrow.jpeg" },
   { name: "34", logo: "public/images/sponsors/procom.jpeg" },
   { name: "35", logo: "public/images/sponsors/walawakar.jpeg" },
- 
 ];
 
 const Sponsors = () => {
@@ -109,7 +104,7 @@ const Sponsors = () => {
             </div>
           </div>
 
-          {/* --- Category 2: Our Partners --- */}
+          {/* --- Category 2: Our Partners (4 per row, Full Color) --- */}
           <div>
             <div className="flex items-center gap-4 mb-16 justify-center animate-fade-in">
               <div className="h-px w-12 md:w-24 bg-gradient-to-r from-transparent to-primary/30"></div>
@@ -119,7 +114,8 @@ const Sponsors = () => {
               <div className="h-px w-12 md:w-24 bg-gradient-to-l from-transparent to-primary/30"></div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 place-items-center">
+            {/* 4 Columns Grid - Full Color Display */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
               {partners.map((partner, index) => (
                 <div
                   key={index}
@@ -129,10 +125,11 @@ const Sponsors = () => {
                   <div className="absolute -inset-[2px] rounded-xl bg-gradient-to-r from-primary via-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 blur-sm transition-all duration-300"></div>
 
                   <div className="relative h-full w-full glass-card flex items-center justify-center p-4 bg-card/40 backdrop-blur-sm border border-white/5 rounded-xl overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                    {/* Removed grayscale and opacity-60 - now full color */}
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-w-[80%] max-h-[80%] object-contain opacity-60 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110"
+                      className="max-w-[80%] max-h-[80%] object-contain transition-all duration-300 group-hover:scale-110"
                     />
                   </div>
                 </div>

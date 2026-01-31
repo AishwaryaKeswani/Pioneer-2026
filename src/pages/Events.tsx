@@ -43,12 +43,18 @@ const Events = () => {
         <div className="container mx-auto px-4 relative z-10">
           {/* Page Header */}
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <p className="font-montserrat text-sm md:text-base text-primary uppercase tracking-[0.3em] mb-3 animate-fade-in">
-              Competition & Innovation
-            </p>
-            <h1 className="font-samarkan text-5xl md:text-7xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              <span className="gradient-text">Festival</span> Events
-            </h1>
+           <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="font-montserrat text-muted-foreground text-sm md:text-base uppercase tracking-widest mb-4">
+            Competition & Innovation
+          </p>
+        </div>
+          <h1
+  className="font-playfair text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-center"
+  style={{ animationDelay: "0.1s" }}
+>
+  <span className="gradient-text">Festival</span> Events
+</h1>
+
             <p className="text-lg text-muted-foreground font-montserrat animate-fade-in mb-8" style={{ animationDelay: "0.2s" }}>
               Discover the main stage central events and specific departmental challenges.
             </p>
