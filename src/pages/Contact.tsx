@@ -1,19 +1,20 @@
+import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
-import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Users } from "lucide-react";
+import { 
+  Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Users, 
+  Send, Loader2 
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { supabase } from "@/lib/supabase";
+import { useToast } from "@/hooks/use-toast";
+import { events } from "@/data/events";
 
-const quickLinks = [
-  { name: "Register for Event", href: "#register" },
-  { name: "Become a Sponsor", href: "/sponsors" },
-  { name: "Join as Volunteer", href: "#volunteer" },
-  { name: "Press & Media", href: "#media" },
-];
-
+// --- Existing Data Preserved ---
 const contactCards = [
   {
     title: "Abhivyakti",
@@ -34,7 +35,6 @@ const contactCards = [
     icon: Users,
   },
 ];
-
 
 const faqs = [
   {
@@ -80,6 +80,86 @@ const faqs = [
 ];
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Form State
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    college: "",
+    branch: "",
+    year: "",
+    issue_type: "",
+    event_name: "",
+    description: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      if (!formData.name || !formData.email || !formData.mobile || !formData.issue_type) {
+        throw new Error("Please fill in all required fields.");
+      }
+
+      // Supabase Insert
+      const { error } = await supabase
+        .from('contacts')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            mobile: formData.mobile,
+            college: formData.college,
+            branch: formData.branch,
+            year: formData.year,
+            issue_type: formData.issue_type,
+            event_name: formData.event_name === "none" ? null : formData.event_name,
+            description: formData.description,
+          }
+        ]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Message Sent!",
+        description: "We have received your query and will get back to you soon.",
+        variant: "default",
+        className: "bg-green-600 border-green-700 text-white"
+      });
+
+      // Reset Form
+      setFormData({
+        name: "",
+        email: "",
+        mobile: "",
+        college: "",
+        branch: "",
+        year: "",
+        issue_type: "",
+        event_name: "",
+        description: "",
+      });
+
+    } catch (error: any) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Submission Failed",
+        description: error.message || "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <Layout>
       {/* Hero */}
@@ -94,41 +174,26 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map & Info */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Map */}
-            <div className="glass-card p-2 animate-fade-in w-full h-[400px]">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.4545676335933!2d74.2599192749174!3d16.654121284113344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0ffb509926fa9%3A0x9af43eb75ec2804!2sKIT's%20College%20of%20Engineering%20Kolhapur%20(Empowered%20Autonomous)!5e0!3m2!1sen!2sin!4v1769778594737!5m2!1sen!2sin"
-                className="w-full h-full rounded-lg"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="KIT College of Engineering Kolhapur Map"
-              />
-            </div>
-
-            {/* Contact Info */}
-            <div className="space-y-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              {/* Contact Details */}
-              <div className="glass-card p-8">
-                <h2 className="font-montserrat font-bold text-2xl text-foreground mb-6">
-                  Contact Information
-                </h2>
-                <ul className="space-y-4">
+      {/* --- NEW: Dynamic Contact Form & General Info --- */}
+      <section className="py-16 bg-card relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+            
+            {/* Left Column: General Contact Info */}
+            <div className="lg:col-span-1 space-y-8 animate-slide-right">
+              <div className="glass-card p-8 rounded-2xl border-white/10 hover:border-primary/30 transition-colors duration-300">
+                <h2 className="text-2xl font-playfair font-bold mb-6 text-white">General Info</h2>
+                <ul className="space-y-6 font-montserrat">
                   <li className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                       <Mail className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Email</p>
-                      <a
-                        href="mailto:contact@punestartupfest.com"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
+                      <a href="mailto:pioneer@kitcoek.in" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                         pioneer@kitcoek.in
                       </a>
                     </div>
@@ -139,19 +204,14 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Phone</p>
-                      <a
-                        href="phone:- +91 8237800585"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        Aishwarya Keswani  - +91 8237800585
-                      </a><br />
-                      <a
-                        href="phone:- +91 8329945496"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-
-                        Shrawani Choughule - +91 8329945496
-                      </a>
+                      <div className="text-sm text-muted-foreground space-y-1">
+                        <a href="tel:+918237800585" className="block hover:text-primary transition-colors">
+                          Aishwarya Keswani - +91 8237800585
+                        </a>
+                        <a href="tel:+918329945496" className="block hover:text-primary transition-colors">
+                          Shrawani Choughule - +91 8329945496
+                        </a>
+                      </div>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
@@ -160,63 +220,213 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Location</p>
-                      <p className="text-muted-foreground">
-                        Kolhapur, Maharashtra, India
+                      <p className="text-muted-foreground text-sm">
+                        KIT’s College of Engineering, Kolhapur,<br/>
+                        Maharashtra 411043
                       </p>
                     </div>
                   </li>
                 </ul>
 
                 {/* Social Links */}
-                <div className="mt-8 pt-6 border-t border-border">
-                  <p className="font-medium text-foreground mb-4">Follow Us</p>
-                  <div className="flex gap-4">
-
-                    <a
-                      href="#"
-                      className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                    >
-                      <Instagram className="h-5 w-5" />
-                    </a>
-                    <a
-                      href="#"
-                      className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                    >
-                      <Linkedin className="h-5 w-5" />
-                    </a>
-                    <a
-                      href="#"
-                      className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                    >
-                      <Twitter className="h-5 w-5" />
-                    </a>
-                  </div>
+                <div className="mt-8 pt-6 border-t border-white/10 flex gap-4">
+                  <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+                    <Twitter className="h-5 w-5" />
+                  </a>
                 </div>
               </div>
 
-              {/* Quick Links */}
-              {/* <div className="glass-card p-8">
-                <h2 className="font-montserrat font-bold text-2xl text-foreground mb-6">
-                  Quick Links
-                </h2>
-                <div className="grid grid-cols-2 gap-4">
-                  {quickLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                    >
-                      {link.name} →
-                    </a>
-                  ))}
-                </div>
-              </div> */}
+              {/* Map */}
+              <div className="glass-card p-2 rounded-2xl border-white/10 h-64 overflow-hidden relative group">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.4545676335933!2d74.2599192749174!3d16.654121284113344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0ffb509926fa9%3A0x9af43eb75ec2804!2sKIT's%20College%20of%20Engineering%20Kolhapur%20(Empowered%20Autonomous)!5e0!3m2!1sen!2sin!4v1769778594737!5m2!1sen!2sin"
+                  className="w-full h-full rounded-xl opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="KIT College Map"
+                />
+              </div>
+            </div>
+
+            {/* Right Column: Contact Form */}
+            <div className="lg:col-span-2 animate-slide-left">
+              <div className="glass-card p-8 md:p-10 rounded-2xl border-white/10 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-3xl rounded-full opacity-20 pointer-events-none"></div>
+                
+                <h2 className="text-3xl font-playfair font-bold mb-8 text-white">Send us a Message</h2>
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Row 1: Name & Email */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-montserrat font-medium text-gray-300">Full Name *</label>
+                      <input
+                        required
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+                        placeholder="John Doe"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-montserrat font-medium text-gray-300">Email Address *</label>
+                      <input
+                        required
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+                        placeholder="john@example.com"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Row 2: Mobile & College */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="mobile" className="text-sm font-montserrat font-medium text-gray-300">Mobile No. *</label>
+                      <input
+                        required
+                        type="tel"
+                        name="mobile"
+                        value={formData.mobile}
+                        onChange={handleChange}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+                        placeholder="+91 98765 43210"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="college" className="text-sm font-montserrat font-medium text-gray-300">College Name *</label>
+                      <input
+                        required
+                        type="text"
+                        name="college"
+                        value={formData.college}
+                        onChange={handleChange}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+                        placeholder="Your Institute Name"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Row 3: Branch & Year */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="branch" className="text-sm font-montserrat font-medium text-gray-300">Branch *</label>
+                      <input
+                        required
+                        type="text"
+                        name="branch"
+                        value={formData.branch}
+                        onChange={handleChange}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+                        placeholder="e.g., Computer Science"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="year" className="text-sm font-montserrat font-medium text-gray-300">Year *</label>
+                      <select
+                        required
+                        name="year"
+                        value={formData.year}
+                        onChange={handleChange}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
+                      >
+                        <option value="" className="bg-gray-900 text-gray-400">Select Year</option>
+                        <option value="FE" className="bg-gray-900">First Year (FE)</option>
+                        <option value="SE" className="bg-gray-900">Second Year (SE)</option>
+                        <option value="TE" className="bg-gray-900">Third Year (TE)</option>
+                        <option value="BE" className="bg-gray-900">Final Year (BE/BTech)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Row 4: Issue Type & Event Name */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label htmlFor="issue_type" className="text-sm font-montserrat font-medium text-gray-300">Type of Issue *</label>
+                      <select
+                        required
+                        name="issue_type"
+                        value={formData.issue_type}
+                        onChange={handleChange}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
+                      >
+                        <option value="" className="bg-gray-900 text-gray-400">Select Type</option>
+                        <option value="Technical" className="bg-gray-900">Technical Issue</option>
+                        <option value="Registration" className="bg-gray-900">Registration Query</option>
+                        <option value="Payment" className="bg-gray-900">Payment Issue</option>
+                        <option value="Sponsorship" className="bg-gray-900">Sponsorship Inquiry</option>
+                        <option value="General" className="bg-gray-900">General Inquiry</option>
+                        <option value="Other" className="bg-gray-900">Other</option>
+                      </select>
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="event_name" className="text-sm font-montserrat font-medium text-gray-300">Event Related To</label>
+                      <select
+                        name="event_name"
+                        value={formData.event_name}
+                        onChange={handleChange}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
+                      >
+                        <option value="none" className="bg-gray-900 text-gray-400">General / No Specific Event</option>
+                        {events.map(event => (
+                          <option key={event.id} value={event.title} className="bg-gray-900">{event.title}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Row 5: Description */}
+                  <div className="space-y-2">
+                    <label htmlFor="description" className="text-sm font-montserrat font-medium text-gray-300">Description (Optional)</label>
+                    <textarea
+                      name="description"
+                      value={formData.description}
+                      onChange={handleChange}
+                      rows={4}
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none"
+                      placeholder="Describe your issue or query in detail..."
+                    />
+                  </div>
+
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full glow-button font-montserrat font-semibold py-4 rounded-xl flex items-center justify-center gap-2 mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5" />
+                        Send Message
+                      </>
+                    )}
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Contact Cards */}
+      {/* --- Existing: Team Contact Cards --- */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -276,7 +486,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* --- Existing: FAQ --- */}
       <section className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-4xl font-bold text-center mb-12">
@@ -294,12 +504,9 @@ const Contact = () => {
                   <AccordionTrigger className="font-montserrat font-medium">
                     {faq.question}
                   </AccordionTrigger>
-
-                  {/* ✅ FIXED NEWLINE ISSUE HERE */}
                   <AccordionContent className="text-muted-foreground whitespace-pre-line">
                     {faq.answer}
                   </AccordionContent>
-
                 </AccordionItem>
               ))}
             </Accordion>
