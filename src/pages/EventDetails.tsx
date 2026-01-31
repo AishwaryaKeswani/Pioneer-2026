@@ -45,9 +45,10 @@ const EventDetails = () => {
           </Link>
 
           {/* --- Main Hero Section --- */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-24">
+            
             {/* Left Column: Content */}
-            <div className="order-2 lg:order-1 animate-slide-right">
+            <div className="order-2 lg:order-1 animate-slide-right self-center">
               {/* Category & Date Pills */}
               <div className="flex flex-wrap items-center gap-4 mb-6">
                 <span className="px-4 py-1.5 text-xs font-montserrat font-bold uppercase tracking-wider text-white bg-primary/80 backdrop-blur-md rounded-full border border-primary/30 flex items-center gap-2">
@@ -71,7 +72,6 @@ const EventDetails = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-6">
-                {/* 1. Updated Register Button to use event.registrationLink */}
                 <a 
                   href={event.registrationLink} 
                   target="_blank" 
@@ -94,26 +94,35 @@ const EventDetails = () => {
               </div>
             </div>
 
-            {/* Right Column: Image Placeholder */}
-            <div className="order-1 lg:order-2 animate-slide-left">
-              <div className="relative group rounded-3xl overflow-hidden aspect-[4/5] lg:aspect-square max-h-[600px] mx-auto">
+            {/* Right Column: Image Placeholder (Dynamic Size & Right Aligned) */}
+            <div className="order-1 lg:order-2 animate-slide-left flex justify-center lg:justify-end">
+              <div className="relative group rounded-3xl w-full max-w-xl lg:ml-auto"> {/* Added max-w-xl and lg:ml-auto for right alignment */}
+                {/* Glow Effect */}
                 <div className="absolute -inset-1 bg-gradient-to-br from-primary via-purple-500 to-secondary rounded-3xl blur-xl opacity-50 group-hover:opacity-80 transition-all duration-500 animate-pulse-glow"></div>
-                <div className="relative h-full w-full bg-card/80 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 p-2">
-                  <div className="h-full w-full rounded-2xl overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                
+                {/* Main Image Container */}
+                <div className="relative bg-card/80 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 p-2">
+                  <div className="rounded-2xl overflow-hidden relative">
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 pointer-events-none"></div>
+                    
+                    {/* Dynamic Image */}
                     <img
                       src={event.image}
                       alt={event.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]" 
                     />
-                    <div className="absolute bottom-8 left-8 z-20">
-                      <h2 className="text-3xl font-playfair font-bold text-white mb-2">{event.title}</h2>
-                      <p className="text-primary font-montserrat tracking-widest uppercase text-sm">{event.category}</p>
+                    
+                    {/* Text Overlay */}
+                    <div className="absolute bottom-8 left-8 z-20 pointer-events-none">
+                      <h2 className="text-3xl font-playfair font-bold text-white mb-2 drop-shadow-lg">{event.title}</h2>
+                      <p className="text-primary font-montserrat tracking-widest uppercase text-sm font-bold bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full inline-block">{event.category}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
 
           {/* --- Information Sections --- */}
@@ -172,7 +181,6 @@ const EventDetails = () => {
                       <span className="text-xl font-bold font-playfair">{event.registrationDetails.teamSize}</span>
                    </div>
                    
-                   {/* 2. Updated Secondary Register Button */}
                    <a 
                      href={event.registrationLink} 
                      target="_blank" 

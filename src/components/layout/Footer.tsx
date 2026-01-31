@@ -24,7 +24,7 @@ export const Footer = () => {
           {/* Branding */}
           <div className="lg:col-span-1">
              <img 
-  src="public/images/home/Reel LOGO Lelo.png"
+  src="/images/home/Reel LOGO Lelo.png"
   alt="Logo"
   className="h-10 w-auto rounded-lg relative z-10 transition-transform duration-300 group-hover:scale-105"
 />

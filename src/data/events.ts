@@ -81,7 +81,7 @@ The event provides a platform for students to:
 • Compete within their domain 
 • Win prizes 
 • Receive incubation and startup support from KIT’s IRF `,
-    image: "public\images\events\abhivyakti.jpeg", 
+    image: "/images/events/abhivyakti.jpeg", 
     icon: Bot,
     date: "Feb 21, 2026",
     registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
@@ -148,7 +148,7 @@ NON-CIRCUIT DOMAIN:
 4. Industry 5.0/4.0 
 5.Sustainable & Green Engg. solutions for Env. Management 
 6. Recent trends related to other engineering domains.`,
-    image: "public\images\events\abhivyakti.jpeg", 
+    image: "public/images/events/abhivyakti.jpeg", 
     icon: Bot,
     date: "Feb 21, 2026",
     registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
@@ -195,7 +195,7 @@ ISSN-registered Book Proceedings`,
 As per rules of qualification, Qualified teams are shortlisted for finale 
 
 2.Final round will be offline mode at KITCoEK on 22nd February 2026`,
-    image: "public\images\events\abhivyakti.jpeg", 
+    image: "/images/events/abhivyakti.jpeg", 
     icon: Bot,
     date: "Feb 15th /Feb 22nd , 2026",
     registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
@@ -247,7 +247,7 @@ Round 3: Coding
          2. Number of Questions: 6
 
 `,
-    image: "public\images\events\stranger-code.jpeg",
+    image: "/images/events/stranger-code.jpeg",
     icon: Database,
     date: "Feb 21, 2026",
     registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
@@ -299,7 +299,7 @@ professionalism.
   Participants will be judged on their skills, communication, and
 conduct throughout the event.
     `,
-    image: "public\images\events\beyond-resume.jpeg",
+    image: "/images/events/beyond-resume.jpeg",
     icon: Database,
     date: "Feb 22, 2026",
     registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
@@ -340,7 +340,7 @@ conduct throughout the event.
     Round 2: Strange Visions, involves poster presentation where participants present their ideas within 5 to 8 minutes. 
     
     Round 3: The Unknown Minute, is an extempore round where students speak on a given topic for 3 to 5 minutes.`,
-    image: "public\images\events\strange-minds.jpeg",
+    image: "/images/events/strange-minds.jpeg",
     icon: Database,
     date: "Feb 22, 2026",
     registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
@@ -377,7 +377,7 @@ conduct throughout the event.
     fullDescription: `IdeaForge is a departmental-level innovation competition organized by the Association of Electronics and Telecommunication Students (ASSETS) as part of PIONEER 2026. The event provides a platform for students to present original startup or product ideas that offer practical solutions to real-world challenges using hardware, software, or integrated systems.
 
 Participants can take part individually or in teams of up to four members. Each team must follow the official presentation structure and adhere strictly to the allotted time limits. The use of clear and concise visuals is encouraged, while heavy text is discouraged. Any pre-existing work must be properly disclosed.`,
-    image: "public\images\events\idea-forged.jpeg",
+    image: "/images/events/idea-forged.jpeg",
     icon: Database,
     date: "Feb 21, 2026",
     registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
@@ -463,7 +463,7 @@ The competition begins with a Problem Selection round where teams choose a real-
 Teams are evaluated on innovation, feasibility, strategic thinking, presentation quality, and decision-making. Judges’ decisions are final.
 
 Tech-Negotia provides students with exposure to business pitching, investment simulation, and teamwork, helping them develop entrepreneurial mindset, analytical thinking, and professional presentation skills.`,
-    image: "public\images\events\tech-negotia.jpeg",
+    image: "/images/events/tech-negotia.jpeg",
     icon: Database,
     date: "Feb 21, 2026",
     registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
@@ -505,7 +505,7 @@ The competition consists of three rounds:
 Round 1: participants take an online aptitude test to shortlist teams. 
 Round 2: involves collecting electronic components hidden across the campus, testing speed, observation, and coordination.
 Round 3: teams must design and build a working circuit using the collected components within the given time limit.`,
-    image: "public\images\events\rush-to-green.jpeg",
+    image: "/images/events/rush-to-green.jpeg",
     icon: Database,
     date: "Feb 21, 2026",
     registrationLink: "https://docs.google.com/forms/d/e/roboclash-form-id/viewform",
