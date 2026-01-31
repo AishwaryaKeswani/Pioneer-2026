@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { Event } from "@/data/events";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +13,7 @@ export const EventCard = ({ event, variant = "default" }: EventCardProps) => {
   const isLarge = variant === "large";
 
   return (
+<<<<<<< HEAD
     <Link
       to={`/events/${event.id}`}
       className={cn(
@@ -35,10 +36,26 @@ export const EventCard = ({ event, variant = "default" }: EventCardProps) => {
               : "bg-gradient-to-r from-sky-400 via-purple-600 to-sky-400 blur-md opacity-40 group-hover:opacity-80 group-hover:blur-lg"
           )}
         />
+=======
+    // Removed outer Link to allow interactive buttons inside
+    <div className={cn("block h-full group perspective-1000", isLarge ? "md:col-span-1" : "")}>
+      <div className={cn(
+          "relative h-full rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 transform-style-3d",
+           isLarge ? "hover:scale-[1.02]" : ""
+        )}>
+        {/* Animated Neon Border Glow */}
+        <div className={cn(
+          "absolute -inset-[2px] rounded-2xl transition-all duration-500 animate-gradient-xy",
+          isLarge 
+            ? "bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-cyan-400 blur-lg opacity-60 group-hover:opacity-100 group-hover:blur-2xl" 
+            : "bg-gradient-to-r from-sky-400 via-purple-600 to-sky-400 blur-md opacity-40 group-hover:opacity-80 group-hover:blur-lg"
+        )}></div>
+>>>>>>> 782f14effe84c66cb7ebb4f3337e2d703020eda3
 
         {/* Card */}
         <div className="relative h-full bg-card/90 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden flex flex-col">
           
+<<<<<<< HEAD
           {/* Image */}
           <div
             className={cn(
@@ -50,6 +67,13 @@ export const EventCard = ({ event, variant = "default" }: EventCardProps) => {
 
             <img
               src={event.image}
+=======
+          {/* Image Container - Linked to Details */}
+          <Link to={`/events/${event.id}`} className={cn("relative overflow-hidden shrink-0 block", isLarge ? "h-64 md:h-72" : "h-48")}>
+            <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent z-10"></div>
+            <img 
+              src={event.image} 
+>>>>>>> 782f14effe84c66cb7ebb4f3337e2d703020eda3
               alt={event.title}
               className="
                 w-full h-full object-cover
@@ -75,8 +99,9 @@ export const EventCard = ({ event, variant = "default" }: EventCardProps) => {
                 {event.category}
               </span>
             </div>
-          </div>
+          </Link>
 
+<<<<<<< HEAD
           {/* Content */}
           <div
             className={cn(
@@ -85,6 +110,11 @@ export const EventCard = ({ event, variant = "default" }: EventCardProps) => {
             )}
           >
             <div className="mb-auto">
+=======
+          {/* Text Content - Linked to Details */}
+          <div className={cn("p-6 flex flex-col flex-grow relative z-20", isLarge ? "p-8" : "")}>
+            <Link to={`/events/${event.id}`} className="mb-auto block">
+>>>>>>> 782f14effe84c66cb7ebb4f3337e2d703020eda3
               <div className="flex items-center gap-3 mb-4">
                 <div
                   className={cn(
@@ -115,16 +145,48 @@ export const EventCard = ({ event, variant = "default" }: EventCardProps) => {
               >
                 {event.shortDescription}
               </p>
+<<<<<<< HEAD
             </div>
 
             {/* Footer */}
             <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-sm font-montserrat font-semibold tracking-wider uppercase text-muted-foreground group-hover:text-white transition-colors">
               <span>Explore</span>
               <ArrowRight className="w-5 h-5 text-primary transform group-hover:translate-x-1 transition-transform" />
+=======
+            </Link>
+            
+            {/* Footer Actions: Explore & Register */}
+            <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between gap-3">
+              {/* Explore Link */}
+              <Link 
+                to={`/events/${event.id}`} 
+                className="flex items-center gap-2 text-sm font-montserrat font-semibold tracking-wider uppercase text-muted-foreground hover:text-white transition-colors group/link"
+              >
+                <span>Explore</span>
+                <ArrowRight className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform text-primary" />
+              </Link>
+
+              {/* Register Button */}
+              <a 
+                href={event.registrationLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={cn(
+                  "flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-lg",
+                  isLarge 
+                    ? "bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500 hover:text-black border border-cyan-500/30 hover:shadow-cyan-500/25" 
+                    : "bg-primary/10 text-primary hover:bg-primary hover:text-white border border-primary/30 hover:shadow-primary/25"
+                )}
+                onClick={(e) => e.stopPropagation()} // Prevent triggering other click events if any
+              >
+                <span>Register</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+>>>>>>> 782f14effe84c66cb7ebb4f3337e2d703020eda3
             </div>
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
