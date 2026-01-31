@@ -10,31 +10,31 @@ const leadership = [
   {
     name: "Dr.Mohan B. Vanarotti",
     role: "Director,KITCoEK",
-    image: "public/images/team/director.png",
+    image: "public/team/Director sir.png",
     linkedin: "https://www.linkedin.com/in/mohanvanarotti?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Dr.Dattatray Sathe",
     role: "Registrar,KITCoEK",
-    image: "public/images/team/Sathe Sir.png",
+    image: "public/team/Dattatray Sathe.png",
     linkedin: "https://www.linkedin.com/in/dr-d-j-sathe-55b768a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Dr.Jitendra Bhat",
     role: "Dean, Student Activity KITCoEK",
-    image: "public/images/team/JS bhat.png",
+    image: "public/team/Bhatt sir.png",
     linkedin: "https://www.linkedin.com/in/dr-jitendra-shankarrao-bhat-137013254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Prof. Ashwini Shinde",
     role: "Faculty advisor, ISTE Student Chapter",
-    image: "public/images/team/Ashwini Shinde.png",
+    image: "public/team/ashwani shinde.png",
     linkedin: "https://www.linkedin.com/in/ashwini-shinde-06b472a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_ap",
   },
   {
     name: "Dr.Sandeep Desai ",
     role: "Convener,Pioneer 2026",
-    image: "public/images/team/SPD.png",
+    image: "public/team/Sandeep Desai.png",
     linkedin: "https://www.linkedin.com/in/sandeep-desai-2a02981a3",
   },
   {
@@ -75,8 +75,8 @@ const departments = [
       { name: "Atharva patil", role: "Sponsorship Co-Head", image: "public/team/atharva-patil.png", linkedin: "https://www.linkedin.com/in/atharva-patil-4107b53a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
       { name: "Vaishnavi Zambre", role: "Registration Co-Head", image: "public/team/vaishvani -zambare.png", linkedin: "https://www.linkedin.com/in/vaishanvi-zambre-236059376" },
       { name: "Sarvesh Sawant", role: "Campaigning Co-Head", image: "public/team/sarvesh -sawant.png", linkedin: "https://www.linkedin.com/in/sarveshsawant45" },
-      { name: "Sharayu Jagtap", role: "Correspondence Co-Head", image: "public/team/sharayu -jagtap.png", linkedin: "#" },
-      { name: "Atharv Kolape", role: "Social Media Co-Head", image: "public/team/atharv-kolape.png", linkedin: "#" },
+      { name: "Sharayu Jagtap", role: "Correspondence Co-Head", image: "public/team/sharayu -jagtap.png", linkedin: "https://www.linkedin.com/in/sharayu-jagtap-9829a13a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      { name: "Atharv Kolape", role: "Social Media Co-Head", image: "public/team/atharv-kolape.png", linkedin: "https://www.linkedin.com/in/atharv-kolape-701269336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ],
   },
   // {
