@@ -230,7 +230,7 @@ As per rules of qualification, Qualified teams are shortlisted for finale`,
   {
     id: "Stranger Code : Escape the upside down",
     title: "Stranger Code : Escape the upside down",
-    category: "Technical Competition",
+    category: "Brainstorm",
     type: 'departmental',
     shortDescription: "Stranger Code: Escape the Upside Down is an offline coding competition organized by ACSES, CSE Department, featuring three rounds—Aptitude, Puzzle & Pseudocode, and Coding—to test problem-solving and programming skills. The event will be held on 21st February 2026 with 200+ participants, exciting prizes, and a total budget of ₹40,000.",
     fullDescription: `The event consists of three progressive rounds designed to evaluate participants’ aptitude, logical reasoning, and coding proficiency.
@@ -279,7 +279,7 @@ Round 3: Coding
  {
     id: "Beyond Resume",
     title: "Beyond Resume",
-    category: "Career Development Event",
+    category: "HireReady",
     type: 'departmental',
   shortDescription: "Beyond Resume is a placement-simulation event designed to evaluate students beyond academics through aptitude, technical skills, communication, and interviews. It provides real-world recruitment experience and professional exposure.",
     fullDescription: `Beyond Resume is a multi-stage placement simulation event organized by the Association of CSE (AIML & DS) Students (ACADS) under PIONEER 2026.The event aims to prepare students for real recruitment processes by testing their aptitude, technical knowledge, communication skills, teamwork, and professional behavior.
@@ -371,7 +371,7 @@ conduct throughout the event.
   {
     id: "IdeaForge",
     title: "IdeaForge",
-    category: "Innovation & Startup",
+    category: "Concepta",
     type: 'departmental',
   shortDescription: "IdeaForge is an idea presentation competition where students pitch innovative startup or product concepts addressing real-world problems. It encourages creativity, technical thinking, and entrepreneurial mindset.",
     fullDescription: `IdeaForge is a departmental-level innovation competition organized by the Association of Electronics and Telecommunication Students (ASSETS) as part of PIONEER 2026. The event provides a platform for students to present original startup or product ideas that offer practical solutions to real-world challenges using hardware, software, or integrated systems.
@@ -453,7 +453,7 @@ Participants can take part individually or in teams of up to four members. Each 
   {
     id: "Tech-Negotia",
     title: "Tech-Negotia",
-    category: "Innovation",
+    category: "Negotiation",
     type: 'departmental',
     shortDescription: "Tech-Negotia is a fast-paced business and innovation challenge where teams solve real-world problems and pitch solutions in an investor-style format. It blends creativity, strategy, and decision-making in a competitive environment.",
     fullDescription: `Tech-Negotia is a dynamic departmental event organized by CABSSA (Computer Science and Business Systems Student’s Association) under PIONEER 2026. The event is designed to test participants’ problem-solving abilities, business thinking, creativity, and pitching skills through multiple competitive rounds.
@@ -496,7 +496,7 @@ Tech-Negotia provides students with exposure to business pitching, investment si
     {
     id: "Rush To GREEN",
     title: "Rush To GREEN",
-    category: "Circuit Design & Practical Electronics",
+    category: "",
     type: 'departmental',
     shortDescription: "Rush To GREEN is a hands-on electrical engineering competition where teams search for components and build functional circuits under time pressure. It tests technical knowledge, speed, and teamwork.",
     fullDescription: `Rush To GREEN is an engaging departmental event organized by ELESA (Electrical Engineers Student Association) as part of PIONEER 2026. The event is designed to evaluate students’ aptitude, component identification skills, and practical circuit-building ability through a series of competitive rounds.
@@ -580,7 +580,7 @@ Entries may be in the form of a PowerPoint presentation or a physical prototype 
   {
     id: "TechNexus",
     title: "TechNexus",
-    category: "Technical Quiz, Debate & Presentation",
+    category: "ThinkTech",
     type: 'departmental',
     shortDescription: "TechNexus is a multi-round technical event that combines knowledge testing, communication, and presentation skills. It provides students with a platform to showcase technical understanding and professional abilities.",
     fullDescription: `echNexus is a departmental technical event organized by the Mechanical Engineering Student Association (MESA) as part of PIONEER 2026. The event is designed to evaluate participants’ technical knowledge, analytical thinking, communication skills, and presentation abilities through a series of competitive rounds.
