@@ -1,3 +1,5 @@
+import { Download } from "lucide-react";
+
 export const PosterSection = () => {
   return (
     <section className="py-20 relative">
@@ -27,16 +29,28 @@ export const PosterSection = () => {
               
               {/* Image updated to w-full h-auto for natural sizing */}
               <img 
-                src="/images/home/NewMainPoster.jpg" 
+                src="/images/home/poster.jpeg" 
                 alt="Pioneer 2026 Event Poster" 
                 className="relative z-10 w-full h-auto object-contain opacity-90 transition-opacity duration-300 group-hover:opacity-100"
-              />
-              
-              
+              />              
             </div>
           </div>
         </div>
+
       </div>
+
+
+         {/* Download Button */}
+        <div className="flex justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <a 
+            href="/images/home/poster.jpeg" 
+            download="Pioneer2026_Poster.jpg"
+            className="glow-button flex items-center gap-3 px-8 py-3 rounded-full font-montserrat font-bold tracking-wider text-sm md:text-base group hover:scale-105 transition-all duration-300"
+          >
+            <Download className="w-5 h-5 group-hover:translate-y-2 transition-transform" />
+            Download Poster
+          </a>
+        </div>
     </section>
   );
 };

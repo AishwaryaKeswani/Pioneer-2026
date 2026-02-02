@@ -83,6 +83,7 @@ const faqs = [
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isBooking, setIsBooking] = useState(false);
   const [searchParams] = useSearchParams();
   
   // Form State
@@ -113,16 +114,25 @@ const Contact = () => {
 
   // Handler for internal "Book My Room" button
   const handleBookRoom = () => {
-    // 1. Set dropdown to Accommodation
+    // 1. Set dropdown to Accommodation and clear any event selection
     setFormData((prev) => ({
       ...prev,
       issue_type: "Accommodation",
+      event_name: "none",
     }));
-    // 2. Scroll to form
+    // 2. Enable booking mode
+    setIsBooking(true);
+    // 3. Scroll to form
     const formElement = document.getElementById('contact-form');
     if (formElement) {
       formElement.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  // Handler to cancel booking mode and reset booking-related fields
+  const handleCancelBooking = () => {
+    setIsBooking(false);
+    setFormData((prev) => ({ ...prev, issue_type: "", event_name: "" }));
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -158,8 +168,8 @@ const Contact = () => {
       if (error) throw error;
 
       toast({
-        title: "Message Sent!",
-        description: "We have received your query and will get back to you soon.",
+        title: isBooking ? "Accommodation Request Sent!" : "Message Sent!",
+        description: isBooking ? "Your accommodation request has been received. We'll confirm availability soon." : "We have received your query and will get back to you soon.",
         variant: "default",
         className: "bg-green-600 border-green-700 text-white"
       });
@@ -176,6 +186,8 @@ const Contact = () => {
         event_name: "",
         description: "",
       });
+      // Reset booking mode
+      setIsBooking(false);
 
     } catch (error: any) {
       console.error("Error submitting form:", error);
@@ -290,7 +302,7 @@ const Contact = () => {
               <div className="glass-card p-8 md:p-10 rounded-2xl border-white/10 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-3xl rounded-full opacity-20 pointer-events-none"></div>
                 
-                <h2 className="text-3xl font-playfair font-bold mb-8 text-white">Send us a Message</h2>
+                <h2 className="text-3xl font-playfair font-bold mb-8 text-white">{isBooking ? "Confirm Your Accommodation" : "Send us a Message"}</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Row 1: Name & Email */}
@@ -381,74 +393,94 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  {/* Row 4: Issue Type & Event Name */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label htmlFor="issue_type" className="text-sm font-montserrat font-medium text-gray-300">Type of Issue *</label>
-                      <select
-                        required
-                        name="issue_type"
-                        value={formData.issue_type}
-                        onChange={handleChange}
-                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
-                      >
-                        <option value="" className="bg-gray-900 text-gray-400">Select Type</option>
-                        <option value="Accommodation" className="bg-gray-900 font-bold text-primary">Accommodation</option> {/* Added Option */}
-                        <option value="Technical" className="bg-gray-900">Technical Issue</option>
-                        <option value="Registration" className="bg-gray-900">Registration Query</option>
-                        <option value="Payment" className="bg-gray-900">Payment Issue</option>
-                        <option value="Sponsorship" className="bg-gray-900">Sponsorship Inquiry</option>
-                        <option value="General" className="bg-gray-900">General Inquiry</option>
-                        <option value="Other" className="bg-gray-900">Other</option>
-                      </select>
+                {!isBooking && (
+                  <>
+                    {/* Row 4: Issue Type & Event Name */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label htmlFor="issue_type" className="text-sm font-montserrat font-medium text-gray-300">Type of Issue *</label>
+                        <select
+                          required
+                          name="issue_type"
+                          value={formData.issue_type}
+                          onChange={handleChange}
+                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
+                        >
+                          <option value="" className="bg-gray-900 text-gray-400">Select Type</option>
+                          <option value="Accommodation" className="bg-gray-900 font-bold text-primary">Accommodation</option> {/* Added Option */}
+                          <option value="Technical" className="bg-gray-900">Technical Issue</option>
+                          <option value="Registration" className="bg-gray-900">Registration Query</option>
+                          <option value="Payment" className="bg-gray-900">Payment Issue</option>
+                          <option value="Sponsorship" className="bg-gray-900">Sponsorship Inquiry</option>
+                          <option value="General" className="bg-gray-900">General Inquiry</option>
+                          <option value="Other" className="bg-gray-900">Other</option>
+                        </select>
+                      </div>
+                      <div className="space-y-2">
+                        <label htmlFor="event_name" className="text-sm font-montserrat font-medium text-gray-300">Event Related To</label>
+                        <select
+                          name="event_name"
+                          value={formData.event_name}
+                          onChange={handleChange}
+                          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
+                        >
+                          <option value="none" className="bg-gray-900 text-gray-400">General / No Specific Event</option>
+                          {events.map(event => (
+                            <option key={event.id} value={event.title} className="bg-gray-900">{event.title}</option>
+                          ))}
+                        </select>
+                      </div>
                     </div>
+                  </>
+                )}
+
+                {!isBooking && (
+                  <>
+                    {/* Row 5: Description */}
                     <div className="space-y-2">
-                      <label htmlFor="event_name" className="text-sm font-montserrat font-medium text-gray-300">Event Related To</label>
-                      <select
-                        name="event_name"
-                        value={formData.event_name}
+                      <label htmlFor="description" className="text-sm font-montserrat font-medium text-gray-300">Description (Optional)</label>
+                      <textarea
+                        name="description"
+                        value={formData.description}
                         onChange={handleChange}
-                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
-                      >
-                        <option value="none" className="bg-gray-900 text-gray-400">General / No Specific Event</option>
-                        {events.map(event => (
-                          <option key={event.id} value={event.title} className="bg-gray-900">{event.title}</option>
-                        ))}
-                      </select>
+                        rows={4}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none"
+                        placeholder="Describe your issue or query in detail..."
+                      />
                     </div>
-                  </div>
+                  </>
+                )}
 
-                  {/* Row 5: Description */}
-                  <div className="space-y-2">
-                    <label htmlFor="description" className="text-sm font-montserrat font-medium text-gray-300">Description (Optional)</label>
-                    <textarea
-                      name="description"
-                      value={formData.description}
-                      onChange={handleChange}
-                      rows={4}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none"
-                      placeholder="Describe your issue or query in detail..."
-                    />
-                  </div>
-
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full glow-button font-montserrat font-semibold py-4 rounded-xl flex items-center justify-center gap-2 mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="w-5 h-5 animate-spin" />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5" />
-                        Send Message
-                      </>
+                  {/* Submit & Cancel Buttons */}
+                  <div className="flex items-center gap-4 mt-4">
+                    {isBooking && (
+                      <button
+                        type="button"
+                        onClick={handleCancelBooking}
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-white/10 text-sm text-muted-foreground hover:bg-white/5 transition-colors"
+                      >
+                        Cancel
+                      </button>
                     )}
-                  </button>
+
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="flex-1 glow-button font-montserrat font-semibold py-4 rounded-xl flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-5 h-5 animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-5 h-5" />
+                          {isBooking ? "Confirm Accommodation" : "Send Message"}
+                        </>
+                      )}
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -487,7 +519,7 @@ const Contact = () => {
                   </li>
                   <li className="flex items-center gap-3">
                     <TrendingUp className="w-5 h-5 text-primary" />
-                    Budget-friendly rates for students
+                    Accomadation is completely free with your event registration (if required)
                   </li>
                 </ul>
                 
@@ -497,7 +529,7 @@ const Contact = () => {
                     onClick={handleBookRoom}
                     className="glow-button font-montserrat inline-flex items-center gap-2 px-8 py-4 text-lg"
                   >
-                    Book My Room
+                    Confirm Accomodation 
                   </button>
                 </div>
               </div>
@@ -507,7 +539,7 @@ const Contact = () => {
                 <div className="absolute -inset-1 bg-gradient-to-br from-primary via-purple-500 to-secondary opacity-70 blur-lg group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative h-full w-full bg-card rounded-2xl overflow-hidden border border-white/10">
                    <img 
-                    src="/images/home/a12.jpg" 
+                    src="/images/home/accomodation.jpg" 
                     alt="Accommodation" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                    />

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 const quickLinks = [
   { name: "Home", path: "/" },
@@ -11,9 +11,8 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Instagram, href: "https://www.instagram.com/kitcoek.pioneer?utm_source=qr&igsh=MXc4ejdqZ2lyYmg0bw%3D%3D", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/pioneer-kitcoek/", label: "LinkedIn" },
 ];
 
 export const Footer = () => {

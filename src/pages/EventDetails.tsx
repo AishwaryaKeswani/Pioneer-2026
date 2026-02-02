@@ -82,15 +82,17 @@ const EventDetails = () => {
                   REGISTER NOW
                 </a>
 
-                <a href="#problem-statement" className="group relative flex items-center justify-center gap-3 px-8 py-4 font-montserrat font-bold tracking-wider text-base md:text-lg text-foreground hover:text-white overflow-hidden rounded-full transition-all duration-300">
-                  <div className="absolute inset-0 rounded-full border-2 border-primary/50 group-hover:border-transparent transition-all duration-300"></div>
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-100 blur-md transition-all duration-300 z-0"></div>
-                  <div className="absolute inset-[2px] rounded-full bg-background z-10 group-hover:bg-transparent transition-all duration-300"></div>
-                  <span className="relative z-20 flex items-center gap-2">
-                    <Download className="w-5 h-5" />
-                    PROBLEM STATEMENT
-                  </span>
-                </a>
+                {event.type === 'central' && (
+                  <a href={event.problemStatementLink} className="group relative flex items-center justify-center gap-3 px-8 py-4 font-montserrat font-bold tracking-wider text-base md:text-lg text-foreground hover:text-white overflow-hidden rounded-full transition-all duration-300">
+                    <div className="absolute inset-0 rounded-full border-2 border-primary/50 group-hover:border-transparent transition-all duration-300"></div>
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-100 blur-md transition-all duration-300 z-0"></div>
+                    <div className="absolute inset-[2px] rounded-full bg-background z-10 group-hover:bg-transparent transition-all duration-300"></div>
+                    <span className="relative z-20 flex items-center gap-2">
+                      <Download className="w-5 h-5" />
+                      PROBLEM STATEMENT
+                    </span>
+                  </a>
+                )}
               </div>
             </div>
 

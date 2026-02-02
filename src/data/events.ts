@@ -12,6 +12,7 @@ export interface Event {
   date: string;
   // New Fields
   registrationLink: string;
+  problemStatementLink?: string;
   prizes: {
     first: string;
     second: string;
@@ -85,6 +86,7 @@ The event provides a platform for students to:
     icon: Bot,
     date: "Feb 21, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6r8iPhNuvOpxJ/view",
+    problemStatementLink: "https://drive.google.com/file/d/123AiMPCFZjUCj6z_6KrWgdqBOPYWtDgY/view?usp=sharing",
      prizes: {
     first: "₹ 60,000",
     second: "₹ 45,000",
@@ -152,6 +154,7 @@ NON-CIRCUIT DOMAIN:
     icon: Bot,
     date: "Feb 21, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6rAtaqsKcdRR3/view",
+    problemStatementLink: "https://drive.google.com/file/d/1dHmXLyof8dTVJ6Raq2Cns4XVb1ZgLDr6/view?usp=sharing",
     prizes: {
     first: "₹ 30,000",
     second: "₹ 20,000",
@@ -199,6 +202,7 @@ As per rules of qualification, Qualified teams are shortlisted for finale
     icon: Bot,
     date: "Feb 15th /Feb 22nd , 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6rF2neb7AMwA0/view",
+    problemStatementLink: "https://drive.google.com/file/d/1AVSMW1ZuSqVLDVk9-pKl-zpnGLeBe8A5/view?usp=sharing",
     prizes: {
     first: "₹UPTO Rs.20,000",
     second: "",
@@ -467,6 +471,7 @@ Tech-Negotia provides students with exposure to business pitching, investment si
     icon: Database,
     date: "Feb 21, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6rLrbGpmxkKPx/view",
+    problemStatementLink: "#problem-statement",
     
     prizes: {
     first: "₹ 5,000",
