@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { 
   Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Users, 
-  Send, Loader2 
+  Send, Loader2, BedDouble, TrendingUp 
 } from "lucide-react";
 import {
   Accordion,
@@ -14,7 +15,7 @@ import { supabase } from "@/lib/supabase";
 import { useToast } from "@/hooks/use-toast";
 import { events } from "@/data/events";
 
-// --- Existing Data Preserved ---
+// --- Existing Data ---
 const contactCards = [
   {
     title: "Abhivyakti",
@@ -82,6 +83,7 @@ const faqs = [
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [searchParams] = useSearchParams();
   
   // Form State
   const [formData, setFormData] = useState({
@@ -95,6 +97,33 @@ const Contact = () => {
     event_name: "",
     description: "",
   });
+
+  // Check for 'issue' param in URL on mount (for external links)
+  useEffect(() => {
+    const issueParam = searchParams.get("issue");
+    if (issueParam) {
+      setFormData((prev) => ({
+        ...prev,
+        issue_type: issueParam,
+      }));
+      // Optional: Auto scroll to form if coming from external link
+      document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [searchParams]);
+
+  // Handler for internal "Book My Room" button
+  const handleBookRoom = () => {
+    // 1. Set dropdown to Accommodation
+    setFormData((prev) => ({
+      ...prev,
+      issue_type: "Accommodation",
+    }));
+    // 2. Scroll to form
+    const formElement = document.getElementById('contact-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -174,8 +203,8 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* --- NEW: Dynamic Contact Form & General Info --- */}
-      <section className="py-16 bg-card relative overflow-hidden">
+      {/* --- Dynamic Contact Form & General Info --- */}
+      <section className="py-16 bg-card relative overflow-hidden" id="contact-form">
         {/* Background Elements */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
         
@@ -364,6 +393,7 @@ const Contact = () => {
                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all appearance-none cursor-pointer"
                       >
                         <option value="" className="bg-gray-900 text-gray-400">Select Type</option>
+                        <option value="Accommodation" className="bg-gray-900 font-bold text-primary">Accommodation</option> {/* Added Option */}
                         <option value="Technical" className="bg-gray-900">Technical Issue</option>
                         <option value="Registration" className="bg-gray-900">Registration Query</option>
                         <option value="Payment" className="bg-gray-900">Payment Issue</option>
@@ -420,6 +450,71 @@ const Contact = () => {
                     )}
                   </button>
                 </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- NEW: Accommodation Section (Placed Here) --- */}
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        {/* Background Decorative Blob */}
+        <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-30 pointer-events-none -translate-y-1/2"></div>
+
+        <div className="container mx-auto px-4">
+          <div className="glass-card p-10 md:p-16 rounded-3xl border border-white/10 relative overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-semibold tracking-wide uppercase">
+                  <BedDouble className="w-4 h-4" />
+                  Stay With Us
+                </div>
+                <h2 className="font-playfair text-3xl md:text-5xl font-bold">
+                  Need Accommodation?
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Traveling from out of town? We've got you covered. We offer comfortable and affordable accommodation options for participants attending Pune Startup Fest.
+                  Experience the event without worrying about your stay.
+                </p>
+                <ul className="space-y-3 text-muted-foreground font-montserrat">
+                  <li className="flex items-center gap-3">
+                    <MapPin className="w-5 h-5 text-primary" />
+                    Close to the venue
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Users className="w-5 h-5 text-primary" />
+                    Networking opportunities with fellow participants
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <TrendingUp className="w-5 h-5 text-primary" />
+                    Budget-friendly rates for students
+                  </li>
+                </ul>
+                
+                {/* Button passing the issue type 'Accommodation' via Smart Logic */}
+                <div className="pt-4">
+                  <button 
+                    onClick={handleBookRoom}
+                    className="glow-button font-montserrat inline-flex items-center gap-2 px-8 py-4 text-lg"
+                  >
+                    Book My Room
+                  </button>
+                </div>
+              </div>
+
+              {/* Accommodation Image/Visual */}
+              <div className="relative h-80 lg:h-full min-h-[300px] rounded-2xl overflow-hidden group">
+                <div className="absolute -inset-1 bg-gradient-to-br from-primary via-purple-500 to-secondary opacity-70 blur-lg group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative h-full w-full bg-card rounded-2xl overflow-hidden border border-white/10">
+                   <img 
+                    src="/images/home/a12.jpg" 
+                    alt="Accommodation" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                   />
+                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+                      <p className="text-white font-playfair text-xl">Comfortable stays for innovators.</p>
+                   </div>
+                </div>
               </div>
             </div>
           </div>
