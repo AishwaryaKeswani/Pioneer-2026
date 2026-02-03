@@ -505,7 +505,7 @@ const Contact = () => {
                   Need Accommodation?
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Traveling from out of town? We've got you covered. We offer comfortable and affordable accommodation options for participants attending Pune Startup Fest.
+                  Traveling from out of town? We've got you covered. We offer comfortable and free accommodation options for participants attending Pioneer 2026.
                   Experience the event without worrying about your stay.
                 </p>
                 <ul className="space-y-3 text-muted-foreground font-montserrat">

@@ -12,6 +12,12 @@ import {
 
 // Expanded list to showcase enjoyment & behind-the-scenes
 const galleryImages = [
+  "/images/BTS/img15.jpeg",
+  "/images/BTS/img16.jpeg",
+  "/images/BTS/img17.jpeg",
+  "/images/BTS/img18.jpeg",
+  "/images/BTS/img19.jpeg",
+  "/images/BTS/img20.jpeg",
   "/images/BTS/img1.jpeg",
   "/images/BTS/img2.jpeg",
   "/images/BTS/img3.jpeg",
@@ -19,19 +25,10 @@ const galleryImages = [
   "/images/BTS/img5.jpeg",
   "/images/BTS/img6.jpeg",
   "/images/BTS/img7.jpeg",
-  "/images/BTS/img8.jpeg",
-  "/images/BTS/img9.jpeg",
-  "/images/BTS/img10.jpeg",
   "/images/BTS/img11.jpeg",
   "/images/BTS/img12.jpeg",
   "/images/BTS/img13.jpeg",
-  "/images/BTS/img14.jpeg",
-  "/images/BTS/img15.jpeg",
-  "/images/BTS/img16.jpeg",
-  "/images/BTS/img17.jpeg",
-  "/images/BTS/img18.jpeg",
-  "/images/BTS/img19.jpeg",
-  "/images/BTS/img20.jpeg",
+  
 ];
 
 // Slider state and logic moved inside the Index component (kept here for reference)

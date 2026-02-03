@@ -44,7 +44,7 @@ export const Navbar = () => {
             <Link to="/" className="flex items-center gap-2">
               <div className="font-montserrat font-bold text-xl md:text-2xl">
                <img 
-  src="/images/home/Reel LOGO Lelo.png"
+  src="/images/home/Logo-1.png"
   alt="Logo"
   className="h-10 w-auto rounded-lg relative z-10 transition-transform duration-300 group-hover:scale-105"
 />

@@ -150,7 +150,7 @@ NON-CIRCUIT DOMAIN:
 4. Industry 5.0/4.0 
 5.Sustainable & Green Engg. solutions for Env. Management 
 6. Recent trends related to other engineering domains.`,
-    image: "images/events/abhivyakti.jpeg", 
+    image: "/images/events/abhivyakti.jpeg", 
     icon: Bot,
     date: "Feb 21, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6rAtaqsKcdRR3/view",
@@ -332,7 +332,7 @@ conduct throughout the event.
   {
     id: "Strange Minds",
     title: "Strange Minds",
-    category: "Interdisciplinary Quiz & Presentation",
+    category: "Quiz",
     type: 'departmental',
   shortDescription: "Strange Minds is a multi-round technical and creative competition that challenges students in biology knowledge, innovation, and spontaneous thinking. It promotes analytical ability, presentation skills, and scientific curiosity.",
     fullDescription: `Strange Minds: Unlock the Quest. Survive the Rounds. is an engaging departmental event organized by the Biotech Students Association under PIONEER 2026. The event is designed to test participants’ conceptual understanding of biology, creativity, and communication skills through a series of competitive and interactive rounds.
@@ -416,7 +416,7 @@ Participants can take part individually or in teams of up to four members. Each 
     {
     id: "Master Bidder",
     title: "Master Bidder",
-    category: "Structural Design & Construction",
+    category: "Design",
     type: 'departmental',
     shortDescription: "Master Bidder is a hands-on civil engineering challenge where teams earn resources, bid strategically, and construct structures under constraints. The event tests planning, design efficiency, teamwork, and structural strength.",
     fullDescription: `Master Bidder is an exciting and interactive civil engineering event organized by the Civil Engineering Student Association as part of PIONEER 2026. The event blends engineering knowledge with strategy and teamwork, offering participants a unique experience of resource management, design, and practical construction.
@@ -541,7 +541,7 @@ Round 3: teams must design and build a working circuit using the collected compo
    {
     id: "En-Vision 2k26",
     title: "En-Vision 2k26",
-    category: "Environmental Innovation & Sustainability",
+    category: "Idea Presentation",
     type: 'departmental',
     shortDescription: "En-Vision 2k26 is an idea and model presentation competition focused on sustainable and environmental solutions. It encourages innovative thinking toward real-world environmental challenges.",
     fullDescription: `En-Vision 2k26 is a departmental event organized by EN4S under the Department of Civil and Environmental Engineering as part of PIONEER 2026. The event provides a platform for students to present innovative ideas or prototype models addressing critical environmental and sustainability issues.
