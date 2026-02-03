@@ -404,7 +404,7 @@ Participants can take part individually or in teams of up to four members. Each 
     "Judges’ decisions will be final and binding"
   ],
   registrationDetails: {
-    fee: "₹ 100 ",
+    fee: "₹ 300 ",
     teamSize: "Max 4 Members."
   },
   coordinators: [
@@ -444,7 +444,7 @@ Participants can take part individually or in teams of up to four members. Each 
     "The judge’s and organizing committee’s decisions will be final and binding."  ],
   registrationDetails: {
     fee: "₹ 300 per Group ",
-    teamSize: "3- 4 Members."
+    teamSize: "1- 4 Members."
   },
   coordinators: [
     { name: "Prof. Omkar Suryawanshi", phone: "+91 9423133773 " },
@@ -488,8 +488,8 @@ Tech-Negotia provides students with exposure to business pitching, investment si
     "Judges will decide the winners, and their decision will be final."
    ],
   registrationDetails: {
-    fee: "₹ 200 per Group ",
-    teamSize: "Max 2  Members."
+    fee: "₹ 300 per Group ",
+    teamSize: "Max 4  Members."
   },
   coordinators: [
     { name: "Mrs. Yashaswini Kadiyal ", phone: "+91 8310817935  " },
@@ -528,8 +528,8 @@ Round 3: teams must design and build a working circuit using the collected compo
     "Judges discussion and decision will be final."
    ],
   registrationDetails: {
-    fee: "₹ 100 per Person ",
-    teamSize: "2 - 4 ( participants per group)"
+    fee: "₹ 300 per Person ",
+    teamSize: "1 - 4 ( participants per group)"
   },
   coordinators: [
     { name: "Aishwarya Dandekar", phone: "+91 7887878377  " },
@@ -574,8 +574,8 @@ Entries may be in the form of a PowerPoint presentation or a physical prototype 
     "The decision of the judges and event head shall be treated as final binding to all. "
    ],
   registrationDetails: {
-    fee: "₹ 100 per Person ",
-    teamSize: "Max 3-4 Members"
+    fee: "₹ 300 per Person ",
+    teamSize: "Max 4 Members"
   },
   coordinators: [
     { name: "Mr Prasad Jadhav ", phone: "+91 9689779499  " },
@@ -597,7 +597,7 @@ The competition consists of three rounds:
 3.Presentation round where participants present technical topics or ideas.`,
     image: "images/events/Tech Nexus.jpeg",
     icon: Database,
-    date: "Feb 22, 2026",
+    date: "Feb 21, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6s6dEUQsypPOc/view",
     
     prizes: {
@@ -616,8 +616,8 @@ The competition consists of three rounds:
     "7.The competition is open to Undergraduate and Diploma students from all departments"
    ],
   registrationDetails: {
-    fee: "₹ 50 per Person ",
-    teamSize: ""
+    fee: "₹ 300 per group",
+    teamSize: "Max 4 Members"
   },
   coordinators: [
     { name: "Mrs. Ashwini Chougule", phone: "+91 8624813812  " },
