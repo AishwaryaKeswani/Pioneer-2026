@@ -5,7 +5,9 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // Fixes the White Page on GitHub Pages (Repo Name)
-  base: mode === 'production' ? '/Pioneer-2026/' : '/',
+  // When building on Vercel, use the root base so asset paths are correct.
+  // Keep the GitHub Pages base for GH Pages deployments.
+  base: mode === 'production' ? (process.env.VERCEL ? '/' : '/Pioneer-2026/') : '/',
   
   server: {
     host: "::",
