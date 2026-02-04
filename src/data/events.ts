@@ -115,7 +115,7 @@ Startups.`
   registrationDetails: {
     fee: "₹ 200 per Participant",
     teamSize: "2 - 6 Members",
-    accommodation: "Included for Outstation Participants"
+    accommodation: "Included  "
   },
   coordinators: [
     { name: "Prof. Arun Desai ", phone: "+91 9881755447" },
@@ -180,7 +180,7 @@ ISSN-registered Book Proceedings`,
   registrationDetails: {
     fee: "₹ 200 per Participant",
     teamSize: "Max 4 Members",
-    accommodation: "Included for Outstation Participants"
+    accommodation: "Included  "
   },
   coordinators: [
     { name: "Dr.Ganesh Kamble", phone: "+91 9822915789" },
@@ -225,7 +225,7 @@ As per rules of qualification, Qualified teams are shortlisted for finale`,
   registrationDetails: {
     fee: "₹  800 per Squad",
     teamSize: "4 Members",
-    accommodation: "Included for Outstation Participants"
+    accommodation: "Included  "
   },
   coordinators: [
     { name: "Dr. Pradeep Khot", phone: "+91 8208269454" },
@@ -277,7 +277,7 @@ Round 3: Coding
   registrationDetails: {
     fee: "₹ 100 ",
     teamSize: "Individual Participation.",
-    accommodation: "Excluded for Outstation Participants"
+    accommodation: "Excluded  "
   },
   coordinators: [
     { name: "Siddhi Shah", phone: "+91 9373555232" },
@@ -328,7 +328,7 @@ conduct throughout the event.
   registrationDetails: {
     fee: "₹ 100 ",
     teamSize: "Individual Participation.",
-    accommodation: "Excluded for Outstation Participants"
+    accommodation: "Excluded  "
   },
   coordinators: [
     { name: "Mrs. Sharvari Chavan", phone: "+91 7499785909" },
@@ -370,7 +370,7 @@ conduct throughout the event.
   registrationDetails: {
     fee: "₹ 100 ",
     teamSize: "Individual Participation.",
-    accommodation: "Excluded for Outstation Participants"
+    accommodation: "Excluded  "
   },
   coordinators: [
     { name: "Mrs. Sharvari Chavan", phone: "+91 9518354600 " },
@@ -413,7 +413,7 @@ Participants can take part individually or in teams of up to four members. Each 
   registrationDetails: {
     fee: "₹ 300 ",
     teamSize: "Max 4 Members.",
-    accommodation: "Excluded for Outstation Participants"
+    accommodation: "Excluded  "
   },
   coordinators: [
     { name: "Shubhamkumar Ojha", phone: "+91 6202808701 " },
@@ -453,7 +453,7 @@ Participants can take part individually or in teams of up to four members. Each 
   registrationDetails: {
     fee: "₹ 300 per Group ",
     teamSize: "1- 4 Members.",
-    accommodation: "Excluded for Outstation Participants"
+    accommodation: "Excluded  "
   },
   coordinators: [
     { name: "Prof. Omkar Suryawanshi", phone: "+91 9423133773 " },
@@ -499,7 +499,7 @@ Tech-Negotia provides students with exposure to business pitching, investment si
   registrationDetails: {
     fee: "₹ 300 per Group ",
     teamSize: "Max 4  Members.",
-    accommodation: "Excluded for Outstation Participants"
+    accommodation: "Excluded  "
   },
   coordinators: [
     { name: "Mrs. Yashaswini Kadiyal ", phone: "+91 8310817935  " },
@@ -540,7 +540,7 @@ Round 3: teams must design and build a working circuit using the collected compo
   registrationDetails: {
     fee: "₹ 300 per Person ",
     teamSize: "1 - 4 ( participants per group)",
-    accommodation: "Excluded for Outstation Participants"
+    accommodation: "Excluded  "
   },
   coordinators: [
     { name: "Aishwarya Dandekar", phone: "+91 7887878377  " },
@@ -588,7 +588,7 @@ Entries may be in the form of a PowerPoint presentation or a physical prototype 
   registrationDetails: {
     fee: "₹ 300 per Person ",
     teamSize: "Max 4 Members",
-    accommodation: "Excluded for Outstation Participants"
+    accommodation: "Excluded  "
   },
   coordinators: [
     { name: "Mr Prasad Jadhav ", phone: "+91 9689779499  " },
@@ -631,7 +631,7 @@ The competition consists of three rounds:
   registrationDetails: {
     fee: "₹ 300 per group",
     teamSize: "Max 4 Members",
-    accommodation: "Excluded for Outstation Participants"
+    accommodation: "Excluded  "
   },
   coordinators: [
     { name: "Mrs. Ashwini Chougule", phone: "+91 8624813812  " },

@@ -66,7 +66,7 @@ const faqs = [
   {
     question: "What is the registration fee?",
     answer:
-      "PRAIKALP: ₹200 per participant (includes accommodation & food for outstation participants)\nBattle Blitz: ₹800 per squad\nABHIVYAKTI: As per paper presentation rules",
+      "PRAIKALP: ₹200 per participant (includes accommodation & food  )\nBattle Blitz: ₹800 per squad\nABHIVYAKTI: As per paper presentation rules",
   },
   {
     question: "What are the important deadlines?",

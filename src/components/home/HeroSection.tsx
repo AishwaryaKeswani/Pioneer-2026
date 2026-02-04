@@ -12,19 +12,7 @@ export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden animated-gradient-bg">
 
-      {/* Background Image (responsive; covers on desktop, contained on small screens) */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <img
-          src="/images/home/image.jpeg"
-          
-          className="w-full h-full object-center opacity-30 md:object-cover object-contain"
-          alt=""
-          aria-hidden="true"
-          loading="eager"
-        />
-        {/* subtle dark overlay for contrast (still behind content which has z-10) */}
-        <div className="absolute inset-0 bg-black/40 md:bg-black/30 pointer-events-none" />
-      </div>
+
 
       {/* Floating Particles */}
       <div className="particles-container">
@@ -39,6 +27,7 @@ export const HeroSection = () => {
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 20}s`,
               animationDuration: `${Math.random() * 10 + 15}s`,
+              backgroundColor: "white",
             }}
           />
         ))}
@@ -50,6 +39,12 @@ export const HeroSection = () => {
           <p className="font-montserrat text-muted-foreground text-sm md:text-base uppercase tracking-widest mb-4">
             KITCOEK PRESENTS
           </p>
+          {/* College Image */}
+          <img
+            src="/images/home/image.png"
+            alt="Kolhapur Institute of Technology"
+            className="mx-auto mb-6 w-35 md:w-41 rounded-lg"
+          />
         </div>
 
       <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>

@@ -196,17 +196,19 @@ const EventDetails = () => {
                       Register Now
                    </a>
                    {/* Secondary action: Get Accommodation (split wrapper into two parts for alignment) */}
-                <div className="flex items-center sm:ml-4">
-                  <div className="hidden sm:block pr-3">
-                    <span className="text-sm text-muted-foreground font-montserrat">Need accommodation?</span>
+                {event.type === 'central' && (
+                  <div className="flex items-center sm:ml-4">
+                    <div className="hidden sm:block pr-3">
+                      <span className="text-sm text-muted-foreground font-montserrat">Need accommodation?</span>
+                    </div>
+                    <div>
+                      <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 bg-card/20 hover:bg-card/30 text-sm font-montserrat font-semibold transition-colors">
+                        <Phone className="w-4 h-4" />
+                        GET ACCOMMODATION
+                      </Link>
+                    </div>
                   </div>
-                  <div>
-                    <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 bg-card/20 hover:bg-card/30 text-sm font-montserrat font-semibold transition-colors">
-                      <Phone className="w-4 h-4" />
-                      GET ACCOMMODATION
-                    </Link>
-                  </div>
-                </div>
+                )}
                 </div>
               </div>
             </div>
