@@ -11,6 +11,21 @@ const navLinks = [
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden animated-gradient-bg">
+
+      {/* Background Image (responsive; covers on desktop, contained on small screens) */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <img
+          src="/images/home/image.jpeg"
+          
+          className="w-full h-full object-center opacity-30 md:object-cover object-contain"
+          alt=""
+          aria-hidden="true"
+          loading="eager"
+        />
+        {/* subtle dark overlay for contrast (still behind content which has z-10) */}
+        <div className="absolute inset-0 bg-black/40 md:bg-black/30 pointer-events-none" />
+      </div>
+
       {/* Floating Particles */}
       <div className="particles-container">
         {[...Array(20)].map((_, i) => (
@@ -57,7 +72,7 @@ export const HeroSection = () => {
 
        {/* Updated Date Layout: Side by Side Dates */}
 <div
-  className="animate-fade-in flex justify-center gap-8 mb-10 flex-wrap"
+  className="animate-fade-in flex flex-row justify-center md:justify-center gap-4 md:gap-8 mb-10 items-center flex-nowrap px-2 md:px-0"
   style={{ animationDelay: "0.6s" }}
 >
 
@@ -67,11 +82,11 @@ export const HeroSection = () => {
     <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-purple-600 to-sky-400 rounded-xl blur opacity-40 group-hover:opacity-100 transition duration-500 group-hover:blur-md animate-gradient-xy"></div>
 
     {/* Glass Card */}
-    <div className="relative glass-card px-8 py-4 rounded-xl border border-white/10 bg-black/80 backdrop-blur-xl flex items-center gap-6">
+    <div className="relative glass-card flex-1 md:flex-none md:w-auto px-3 md:px-8 py-2 md:py-4 rounded-xl border border-white/10 bg-black/80 backdrop-blur-xl flex items-center gap-3 md:gap-6 flex-shrink-0">
       
       {/* Month & Year */}
       <div className="flex flex-col items-end justify-center">
-        <span className="font-montserrat text-xl md:text-2xl font-bold text-gray-200 tracking-wider">
+        <span className="font-montserrat text-lg md:text-2xl font-bold text-gray-200 tracking-wider">
           FEB
         </span>
         <span className="font-montserrat text-sm md:text-base text-gray-400 tracking-widest">
@@ -80,14 +95,14 @@ export const HeroSection = () => {
       </div>
 
       {/* Divider */}
-      <div className="h-12 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
+      <div className="h-10 md:h-12 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
 
       {/* Date */}
       <div className="flex items-baseline">
-        <span className="font-playfair text-5xl md:text-7xl font-bold text-white drop-shadow-lg leading-none">
+        <span className="font-playfair text-4xl md:text-7xl font-bold text-white drop-shadow-lg leading-none">
           21
         </span>
-        <span className="font-playfair text-2xl md:text-3xl font-bold text-white/90 ml-1">
+        <span className="font-playfair text-lg md:text-3xl font-bold text-white/90 ml-1">
           st
         </span>
       </div>
@@ -100,11 +115,11 @@ export const HeroSection = () => {
     <div className="absolute -inset-1 bg-gradient-to-r from-sky-400 via-purple-600 to-sky-400 rounded-xl blur opacity-40 group-hover:opacity-100 transition duration-500 group-hover:blur-md animate-gradient-xy"></div>
 
     {/* Glass Card */}
-    <div className="relative glass-card px-8 py-4 rounded-xl border border-white/10 bg-black/80 backdrop-blur-xl flex items-center gap-6">
+    <div className="relative glass-card flex-1 md:flex-none md:w-auto px-3 md:px-8 py-2 md:py-4 rounded-xl border border-white/10 bg-black/80 backdrop-blur-xl flex items-center gap-3 md:gap-6 flex-shrink-0">
       
       {/* Month & Year */}
       <div className="flex flex-col items-end justify-center">
-        <span className="font-montserrat text-xl md:text-2xl font-bold text-gray-200 tracking-wider">
+        <span className="font-montserrat text-lg md:text-2xl font-bold text-gray-200 tracking-wider">
           FEB
         </span>
         <span className="font-montserrat text-sm md:text-base text-gray-400 tracking-widest">
@@ -113,14 +128,14 @@ export const HeroSection = () => {
       </div>
 
       {/* Divider */}
-      <div className="h-12 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
+      <div className="h-10 md:h-12 w-px bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
 
       {/* Date */}
       <div className="flex items-baseline">
-        <span className="font-playfair text-5xl md:text-7xl font-bold text-white drop-shadow-lg leading-none">
+        <span className="font-playfair text-4xl md:text-7xl font-bold text-white drop-shadow-lg leading-none">
           22
         </span>
-        <span className="font-playfair text-2xl md:text-3xl font-bold text-white/90 ml-1">
+        <span className="font-playfair text-lg md:text-3xl font-bold text-white/90 ml-1">
           nd
         </span>
       </div>

@@ -21,6 +21,7 @@ export interface Event {
   };
   rules: string[];
   registrationDetails: {
+    accommodation: string;
     fee: string;
     teamSize: string;
   };
@@ -106,14 +107,15 @@ Feasibility/Business/Scope/ Scalability, etc.)  `,
 (Format: Name_College_Domain_Title) `,
     "Abstract Submission Deadline: 18th February 2026 ",
     ` Registration Fee: ₹ 200 рer Participant (Accommodation and Food for 
-Outstation Participants included) `,
+Outstation Participants Excluded) `,
     "Prizes will be Awarded separately For each Domain .",
     `Incubation Support at KIT's IRF for Winners & interested Innovators/ 
 Startups.`
   ],
   registrationDetails: {
     fee: "₹ 200 per Participant",
-    teamSize: "2 - 6 Members"
+    teamSize: "2 - 6 Members",
+    accommodation: "Included for Outstation Participants"
   },
   coordinators: [
     { name: "Prof. Arun Desai ", phone: "+91 9881755447" },
@@ -177,7 +179,8 @@ ISSN-registered Book Proceedings`,
   ],
   registrationDetails: {
     fee: "₹ 200 per Participant",
-    teamSize: "Max 4 Members"
+    teamSize: "Max 4 Members",
+    accommodation: "Included for Outstation Participants"
   },
   coordinators: [
     { name: "Dr.Ganesh Kamble", phone: "+91 9822915789" },
@@ -221,7 +224,8 @@ As per rules of qualification, Qualified teams are shortlisted for finale`,
   ],
   registrationDetails: {
     fee: "₹  800 per Squad",
-    teamSize: "4 Members"
+    teamSize: "4 Members",
+    accommodation: "Included for Outstation Participants"
   },
   coordinators: [
     { name: "Dr. Pradeep Khot", phone: "+91 8208269454" },
@@ -272,7 +276,8 @@ Round 3: Coding
   ],
   registrationDetails: {
     fee: "₹ 100 ",
-    teamSize: "Individual Participation."
+    teamSize: "Individual Participation.",
+    accommodation: "Excluded for Outstation Participants"
   },
   coordinators: [
     { name: "Siddhi Shah", phone: "+91 9373555232" },
@@ -322,7 +327,8 @@ conduct throughout the event.
   ],
   registrationDetails: {
     fee: "₹ 100 ",
-    teamSize: "Individual Participation."
+    teamSize: "Individual Participation.",
+    accommodation: "Excluded for Outstation Participants"
   },
   coordinators: [
     { name: "Mrs. Sharvari Chavan", phone: "+91 7499785909" },
@@ -363,7 +369,8 @@ conduct throughout the event.
   ],
   registrationDetails: {
     fee: "₹ 100 ",
-    teamSize: "Individual Participation."
+    teamSize: "Individual Participation.",
+    accommodation: "Excluded for Outstation Participants"
   },
   coordinators: [
     { name: "Mrs. Sharvari Chavan", phone: "+91 9518354600 " },
@@ -405,7 +412,8 @@ Participants can take part individually or in teams of up to four members. Each 
   ],
   registrationDetails: {
     fee: "₹ 300 ",
-    teamSize: "Max 4 Members."
+    teamSize: "Max 4 Members.",
+    accommodation: "Excluded for Outstation Participants"
   },
   coordinators: [
     { name: "Shubhamkumar Ojha", phone: "+91 6202808701 " },
@@ -423,7 +431,7 @@ Participants can take part individually or in teams of up to four members. Each 
     
    The competition begins with interactive games through which teams earn virtual resources. These resources are then used in a live auction to bid for construction materials. Using only the materials acquired, teams must design and build an efficient structure within the given time limit and resource constraints.
     `,
-    image: "images/events/Master Bidder.jpg",
+    image: "/images/events/Master Bidder.jpg",
     icon: Database,
     date: "Feb 21, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6s38kAHqsb64f/view",
@@ -444,7 +452,8 @@ Participants can take part individually or in teams of up to four members. Each 
     "The judge’s and organizing committee’s decisions will be final and binding."  ],
   registrationDetails: {
     fee: "₹ 300 per Group ",
-    teamSize: "1- 4 Members."
+    teamSize: "1- 4 Members.",
+    accommodation: "Excluded for Outstation Participants"
   },
   coordinators: [
     { name: "Prof. Omkar Suryawanshi", phone: "+91 9423133773 " },
@@ -489,7 +498,8 @@ Tech-Negotia provides students with exposure to business pitching, investment si
    ],
   registrationDetails: {
     fee: "₹ 300 per Group ",
-    teamSize: "Max 4  Members."
+    teamSize: "Max 4  Members.",
+    accommodation: "Excluded for Outstation Participants"
   },
   coordinators: [
     { name: "Mrs. Yashaswini Kadiyal ", phone: "+91 8310817935  " },
@@ -529,7 +539,8 @@ Round 3: teams must design and build a working circuit using the collected compo
    ],
   registrationDetails: {
     fee: "₹ 300 per Person ",
-    teamSize: "1 - 4 ( participants per group)"
+    teamSize: "1 - 4 ( participants per group)",
+    accommodation: "Excluded for Outstation Participants"
   },
   coordinators: [
     { name: "Aishwarya Dandekar", phone: "+91 7887878377  " },
@@ -553,7 +564,8 @@ Participants can present their work based on themes such as:
 4.Water Conservation and Management. 
 
 Entries may be in the form of a PowerPoint presentation or a physical prototype model.`,
-    image: "images/events/envision.jpeg",
+    image: "/images/events/envision.jpeg",
+    
     icon: Database,
     date: "Feb 22, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6sDi5warNhBUC/view",
@@ -575,7 +587,8 @@ Entries may be in the form of a PowerPoint presentation or a physical prototype 
    ],
   registrationDetails: {
     fee: "₹ 300 per Person ",
-    teamSize: "Max 4 Members"
+    teamSize: "Max 4 Members",
+    accommodation: "Excluded for Outstation Participants"
   },
   coordinators: [
     { name: "Mr Prasad Jadhav ", phone: "+91 9689779499  " },
@@ -595,7 +608,7 @@ The competition consists of three rounds:
 1.Technical Quiz to assess core engineering concepts.
 2.Debate round to test communication and critical thinking. 
 3.Presentation round where participants present technical topics or ideas.`,
-    image: "images/events/Tech Nexus.jpeg",
+    image: "/images/events/Tech Nexus.jpeg",
     icon: Database,
     date: "Feb 21, 2026",
     registrationLink: "https://pages.razorpay.com/pl_S6s6dEUQsypPOc/view",
@@ -617,7 +630,8 @@ The competition consists of three rounds:
    ],
   registrationDetails: {
     fee: "₹ 300 per group",
-    teamSize: "Max 4 Members"
+    teamSize: "Max 4 Members",
+    accommodation: "Excluded for Outstation Participants"
   },
   coordinators: [
     { name: "Mrs. Ashwini Chougule", phone: "+91 8624813812  " },

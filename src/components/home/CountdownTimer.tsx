@@ -36,16 +36,16 @@ export const CountdownTimer = () => {
   }, []);
 
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
-    <div className="flex flex-col items-center mx-2 md:mx-4 group">
+    <div className="flex flex-col items-center group">
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
-        <div className="relative glass-card w-20 h-20 md:w-28 md:h-28 flex items-center justify-center border-primary/30">
-          <span className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70 font-montserrat tabular-nums">
+        <div className="relative glass-card w-14 h-14 md:w-28 md:h-28 flex items-center justify-center border-primary/30">
+          <span className="text-2xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70 font-montserrat tabular-nums">
             {value.toString().padStart(2, "0")}
           </span>
         </div>
       </div>
-      <span className="mt-4 text-xs md:text-sm font-montserrat uppercase tracking-widest text-muted-foreground">
+      <span className="mt-2 md:mt-4 text-xs md:text-sm font-montserrat uppercase tracking-widest text-muted-foreground">
         {label}
       </span>
     </div>
@@ -54,7 +54,7 @@ export const CountdownTimer = () => {
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-wrap justify-center items-center">
+        <div className="flex justify-center items-center flex-nowrap overflow-x-auto space-x-3 md:space-x-6 px-2">
           <TimeUnit value={timeLeft.days} label="Days" />
           <TimeUnit value={timeLeft.hours} label="Hours" />
           <TimeUnit value={timeLeft.minutes} label="Minutes" />

@@ -182,6 +182,10 @@ const EventDetails = () => {
                       <span className="text-sm font-montserrat uppercase tracking-wider text-muted-foreground">Team Size</span>
                       <span className="text-xl font-bold font-playfair">{event.registrationDetails.teamSize}</span>
                    </div>
+                   <div className="flex flex-col gap-2">
+                      <span className="text-sm font-montserrat uppercase tracking-wider text-muted-foreground">Accommodation</span>
+                      <span className="text-xl font-bold font-playfair">{event.registrationDetails.accommodation || "Not Included"}</span>
+                   </div>
                    
                    <a 
                      href={event.registrationLink} 
@@ -191,6 +195,18 @@ const EventDetails = () => {
                    >
                       Register Now
                    </a>
+                   {/* Secondary action: Get Accommodation (split wrapper into two parts for alignment) */}
+                <div className="flex items-center sm:ml-4">
+                  <div className="hidden sm:block pr-3">
+                    <span className="text-sm text-muted-foreground font-montserrat">Need accommodation?</span>
+                  </div>
+                  <div>
+                    <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 bg-card/20 hover:bg-card/30 text-sm font-montserrat font-semibold transition-colors">
+                      <Phone className="w-4 h-4" />
+                      GET ACCOMMODATION
+                    </Link>
+                  </div>
+                </div>
                 </div>
               </div>
             </div>
