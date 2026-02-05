@@ -27,7 +27,7 @@ export const HeroSection = () => {
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 20}s`,
               animationDuration: `${Math.random() * 10 + 15}s`,
-              backgroundColor: "white",
+              backgroundColor: "rgba(255, 255, 255, 0.3)",
             }}
           />
         ))}

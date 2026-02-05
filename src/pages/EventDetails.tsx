@@ -182,10 +182,12 @@ const EventDetails = () => {
                       <span className="text-sm font-montserrat uppercase tracking-wider text-muted-foreground">Team Size</span>
                       <span className="text-xl font-bold font-playfair">{event.registrationDetails.teamSize}</span>
                    </div>
+                   {event.type === 'central' && (
                    <div className="flex flex-col gap-2">
                       <span className="text-sm font-montserrat uppercase tracking-wider text-muted-foreground">Accommodation</span>
                       <span className="text-xl font-bold font-playfair">{event.registrationDetails.accommodation || "Not Included"}</span>
                    </div>
+                   )}
                    
                    <a 
                      href={event.registrationLink} 
